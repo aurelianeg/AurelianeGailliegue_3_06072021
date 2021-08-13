@@ -1,0 +1,105 @@
+/* --------------- Color chart --------------- */
+
+/* First (violet): #9356DC
+Second (pink): #FF79DA
+Third (mint): #99E2D0
+Light violet: #F5EDFF
+Light grey: #F6F6F6
+Dark grey: #363636 */
+
+/* --------------- Fonts --------------- */
+
+/* Logo and titles: Shrikhand
+Text : Roboto */
+
+/*@font-face
+{
+    font-family: "";
+    src: url(fonts/Raleway-Light.ttf) format('truetype');
+    font-weight: 400;
+}
+
+html, input
+{
+    font-family: "Raleway", "Trebuchet MS", Arial, sans-serif;
+    font-weight: 400;
+}*/
+
+/* --------------- Links --------------- */
+
+a, a:visited
+{
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover, a.active
+{
+    color: #9356DC;
+}
+
+/* --------------- Body --------------- */
+
+body
+{
+    max-width: 375px;
+    background-color: white;
+    margin: 0 auto;
+}
+
+
+/* ====================================== */
+/* =============== HEADER =============== */
+/* ====================================== */
+
+
+/* ====================================================== */
+/* =============== SECTION - LOCALISATION =============== */
+/* ====================================================== */
+
+/* ======================================================== */
+/* =============== SECTION - FONCTIONNEMENT =============== */
+/* ======================================================== */
+
+/* ===================================================== */
+/* =============== SECTION - RESTAURANTS =============== */
+/* ===================================================== */
+
+.rest
+{
+    width: 100%;
+    height: 250px;
+
+}
+
+.rest_img
+{
+    width: 100%;
+    height: 70%;
+}
+
+.rest_description
+{
+    width: 100%;
+    height: 30%;
+}
+
+
+/* ====================================== */
+/* =============== FOOTER =============== */
+/* ====================================== */
+
+footer
+{
+    background-color: #363636;
+}
+
+footer p
+{
+    color: white;
+}
+
+footer a:hover, footer a:active
+{
+    color: #99E2D0;
+}
