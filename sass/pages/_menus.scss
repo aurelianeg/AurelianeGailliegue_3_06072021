@@ -1,0 +1,51 @@
+/* ====================================== */
+/* =============== HEADER =============== */
+/* ====================================== */
+
+.return
+{
+    padding: 25px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 2;
+
+    &_icon
+    {
+        height: 20px;
+    }
+}
+
+
+/* ============================================== */
+/* =============== SECTION - MENU =============== */
+/* ============================================== */
+
+.menu_img
+{
+    width: 100%;
+}
+
+.menu
+{
+    padding: 20px;
+
+    &_header
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        &_title
+        {
+            font-family: "Shrikhand", "Trebuchet MS", Arial, sans-serif;
+        }
+
+        &_heart
+        {
+            height: 25px;
+            padding: 10px;
+            align-self: center;
+        }
+    }
+}

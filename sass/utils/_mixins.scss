@@ -1,11 +1,15 @@
-@mixin flex-row()
+@mixin flex-row($justify-content, $align-items)
 {
     display: flex;
     flex-direction: row;
+    justify-content: $justify-content;
+    align-items: $align-items;
 }
 
-@mixin flex-col
+@mixin flex-col($justify-content, $align-items)
 {
     display: flex;
     flex-direction: column;
+    justify-content: $justify-content;
+    align-items: $align-items;
 }

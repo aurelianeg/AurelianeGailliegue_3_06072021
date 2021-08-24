@@ -1,49 +1,8 @@
-@import "./utils/variables";
+@import "./base/fonts";
+@import "./pages/menus";
+@import "./utils/functions";
 @import "./utils/mixins";
-
-
-/* --------------- Fonts --------------- */
-
-/* Logo and titles: Shrikhand
-Text : Roboto */
-
-@font-face
-{
-    font-family: "Roboto";
-    src: url('assets/fonts/roboto/Roboto-Thin-webfont.woff') format('woff');
-    src: url('assets/fonts/roboto/Roboto-Thin.ttf') format('truetype');
-    font-weight: 400;
-}
-
-@font-face
-{
-    font-family: "Roboto";
-    src: url('assets/fonts/roboto/Roboto-Bold-webfont.woff') format('woff');
-    src: url('assets/fonts/roboto/Roboto-Bold.ttf') format('truetype');
-    font-weight: 500;
-}
-
-@font-face
-{
-    font-family: "Shrikhand";
-    src: url('assets/fonts/shrikhand/Shrikhand-Regular.otf') format("opentype");
-    font-weight: 500;
-}
-
-html
-{
-    font-family: "Roboto", "Shrikhand", "Trebuchet MS", Arial, sans-serif;
-}
-
-h1, h2, h3
-{
-    font-weight: 500;
-}
-
-h4, p
-{
-    font-weight: 400;
-}
+@import "./utils/variables";
 
 
 /* --------------- Links --------------- */
@@ -52,11 +11,6 @@ a, a:visited
 {
     color: inherit;
     text-decoration: none;
-}
-
-a:hover, a.active
-{
-    color: $color-primary;
 }
 
 /* --------------- Body --------------- */
@@ -77,16 +31,13 @@ body
 {
     height: 55px;
     padding-top: 10px;
-    @include flex-row();
-    justify-content: center;
-    align-items: center;
+    @include flex-row(center, center);
     box-shadow: 0px 0px 11px 4px #CECECE;
     position: relative;
     .logo
     {
         height: 25px;
     }
-
 }
 
 
@@ -98,10 +49,7 @@ body
 {
     background-color: $middlegrey;
     height: 50px;
-    @include flex-row();
-    justify-content: center;
-    align-items: center;
-
+    @include flex-row(center, center);
     h3
     {
         color: $locicongrey;
@@ -124,8 +72,9 @@ body
     background-color: $lightgrey;
     height: 285px;
     padding: 20px;
-    @include flex-col();
-    align-items: center;
+    padding-bottom: 55px;
+    @include flex-col(space-between, center);
+    text-align: center;
 }
 
 
@@ -143,8 +92,7 @@ body
     height: 70px;
     margin-top: 10px;
     margin-bottom: 10px;
-    @include flex-row();
-    align-items: center;
+    @include flex-row(auto, center);
 
     &_nb
     {
@@ -154,8 +102,7 @@ body
         color: white;
         padding: 5px;
         border-radius: 50px;
-        @include flex-row();
-        justify-content: center;
+        @include flex-row(center, auto);
         position: absolute;
     }
 
@@ -167,8 +114,7 @@ body
         padding-left: 20px;
         border-radius: 20px;
         box-shadow: 0px 2px 10px 0px #E7E7E7;
-        @include flex-row();
-        align-items: center;
+        @include flex-row(auto, center);
         &_icon
         {
             width: 20%;
@@ -187,6 +133,39 @@ body
 {
     background-color: $lightgrey;
     padding: 20px;
+    padding-top: 30px;
+    padding-bottom: 60px;
+}
+
+#rest_grid
+{
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 20px;
+    grid-template-areas: "rest1"
+                         "rest2"
+                         "rest3"
+                         "rest4";
+}
+
+#rest1
+{
+    grid-area: "rest1";
+}
+
+#rest2
+{
+    grid-area: "rest2";
+}
+
+#rest3
+{
+    grid-area: "rest3";
+}
+
+#rest4
+{
+    grid-area: "rest4";
 }
 
 .rest
@@ -195,8 +174,9 @@ body
     height: 250px;
     border-radius: 20px;
     box-shadow: 0px 0px 10px 2px #E6E6E6;
-    @include flex-col();
+    @include flex-col(auto, auto);
     overflow: hidden;
+    position: relative;
 
     &_img
     {
@@ -207,13 +187,37 @@ body
         object-fit: cover;
     }
 
-    &_description
+    &_desc
     {
-        width: 100%;
         height: 30%;
         padding: 10px;
-        @include flex-col();
-        justify-content: space-around;
+        @include flex-row(space-between, auto);
+        &_txt
+        {
+            @include flex-col(space-between, auto);
+            h2, h4
+            {
+                margin: 0px;
+            }
+        }
+        &_heart
+        {
+            height: 25px;
+            padding: 10px;
+            align-self: center;
+        }
+    }
+
+    &_new
+    {
+        position: absolute;
+        top: 0px;
+        right: 15px;
+        padding: 5px;
+        padding-left: 15px;
+        padding-right: 15px;
+        background-color: $color-tertiary;
+        color: $color-tertiarydark;
     }
 }
 
@@ -225,17 +229,19 @@ body
 .footer
 {
     background-color: $darkgrey;
-    padding: 20px;
+    padding: 25px;
+    padding-bottom: 30px;
 
     .logo
     {
-        height: 20px;
+        height: 18px;
+        margin-top: 5px;
+        margin-bottom: 10px;
     }
 
     &_el
     {
-        @include flex-row();
-        align-items: center;
+        @include flex-row(auto, center);
         &_icon
         {
             height: 15px;
@@ -246,11 +252,12 @@ body
     p
     {
         color: white;
+        margin-top: 5px;
+        margin-bottom: 5px;
     }
 
     a:hover, a:active
     {
-        color: $color-tertiary;
+        color: $color-primary;
     }
 }
-
