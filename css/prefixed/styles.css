@@ -1,0 +1,271 @@
+/* --------------- Color chart --------------- */
+/* --------------- Fonts --------------- */
+/* Logo and titles: Shrikhand
+Text : Roboto */
+@font-face {
+  font-family: "Roboto";
+  src: url("assets/fonts/roboto/Roboto-Thin-webfont.woff") format("woff");
+  src: url("assets/fonts/roboto/Roboto-Thin.ttf") format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("assets/fonts/roboto/Roboto-Bold-webfont.woff") format("woff");
+  src: url("assets/fonts/roboto/Roboto-Bold.ttf") format("truetype");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Shrikhand";
+  src: url("assets/fonts/shrikhand/Shrikhand-Regular.otf") format("opentype");
+  font-weight: 500;
+}
+html {
+  font-family: "Roboto", "Shrikhand", "Trebuchet MS", Arial, sans-serif;
+}
+
+h1, h2, h3 {
+  font-weight: 500;
+}
+
+h4, p {
+  font-weight: 400;
+}
+
+/* --------------- Links --------------- */
+a, a:visited {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover, a.active {
+  color: #9356DC;
+}
+
+/* --------------- Body --------------- */
+body {
+  max-width: 375px;
+  background-color: white;
+  margin: 0 auto;
+}
+
+/* ====================================== */
+/* =============== HEADER =============== */
+/* ====================================== */
+.header {
+  height: 55px;
+  padding-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 0px 0px 11px 4px #CECECE;
+          box-shadow: 0px 0px 11px 4px #CECECE;
+  position: relative;
+}
+.header .logo {
+  height: 25px;
+}
+
+/* ====================================================== */
+/* =============== SECTION - LOCALISATION =============== */
+/* ====================================================== */
+#loc_s {
+  background-color: #EAEAEA;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+#loc_s h3 {
+  color: #353535;
+}
+
+.loc_icon {
+  height: 18px;
+  margin-right: 15px;
+}
+
+/* ======================================================== */
+/* =============== SECTION - FONCTIONNEMENT =============== */
+/* ======================================================== */
+#pres_s {
+  background-color: #F6F6F6;
+  height: 285px;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* ======================================================== */
+/* =============== SECTION - FONCTIONNEMENT =============== */
+/* ======================================================== */
+#fonc_s {
+  padding: 15px;
+}
+
+.fonc {
+  height: 70px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.fonc_nb {
+  width: 20px;
+  height: 20px;
+  background-color: #9356DC;
+  color: white;
+  padding: 5px;
+  border-radius: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+}
+.fonc_block {
+  background-color: #F6F6F6;
+  width: 100%;
+  margin-left: 15px;
+  padding-left: 20px;
+  border-radius: 20px;
+  -webkit-box-shadow: 0px 2px 10px 0px #E7E7E7;
+          box-shadow: 0px 2px 10px 0px #E7E7E7;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.fonc_block_icon {
+  width: 20%;
+  height: 20px;
+  margin-right: 5px;
+}
+
+/* ===================================================== */
+/* =============== SECTION - RESTAURANTS =============== */
+/* ===================================================== */
+#rest_s {
+  background-color: #F6F6F6;
+  padding: 20px;
+}
+
+.rest {
+  width: 100%;
+  height: 250px;
+  border-radius: 20px;
+  -webkit-box-shadow: 0px 0px 10px 2px #E6E6E6;
+          box-shadow: 0px 0px 10px 2px #E6E6E6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow: hidden;
+}
+.rest_img {
+  width: 100%;
+  height: 70%;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.rest_description {
+  width: 100%;
+  height: 30%;
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+/* ====================================== */
+/* =============== FOOTER =============== */
+/* ====================================== */
+.footer {
+  background-color: #363636;
+  padding: 20px;
+}
+.footer .logo {
+  height: 20px;
+}
+.footer_el {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.footer_el_icon {
+  height: 15px;
+  margin-right: 10px;
+}
+.footer p {
+  color: white;
+}
+.footer a:hover, .footer a:active {
+  color: #99E2D0;
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3Nhc3MvdXRpbHMvX3ZhcmlhYmxlcy5zY3NzIiwiLi4vLi4vc2Fzcy9tYWluLnNjc3MiLCIuLi9zdHlsZXMuY3NzIiwiLi4vLi4vc2Fzcy91dGlscy9fbWl4aW5zLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsZ0RBQUE7QUNJQSwwQ0FBQTtBQUVBO2VBQUE7QUFHQTtFQUVJLHFCQUFBO0VBQ0EsdUVBQUE7RUFDQSxrRUFBQTtFQUNBLGdCQUFBO0FDTEo7QURRQTtFQUVJLHFCQUFBO0VBQ0EsdUVBQUE7RUFDQSxrRUFBQTtFQUNBLGdCQUFBO0FDUEo7QURVQTtFQUVJLHdCQUFBO0VBQ0EsMkVBQUE7RUFDQSxnQkFBQTtBQ1RKO0FEWUE7RUFFSSxxRUFBQTtBQ1hKOztBRGNBO0VBRUksZ0JBQUE7QUNaSjs7QURlQTtFQUVJLGdCQUFBO0FDYko7O0FEaUJBLDBDQUFBO0FBRUE7RUFFSSxjQUFBO0VBQ0EscUJBQUE7QUNoQko7O0FEbUJBO0VBRUksY0R4RFk7QUV1Q2hCOztBRG9CQSx5Q0FBQTtBQUVBO0VBRUksZ0JBQUE7RUFDQSx1QkFBQTtFQUNBLGNBQUE7QUNuQko7O0FEdUJBLDJDQUFBO0FBQ0EsMkNBQUE7QUFDQSwyQ0FBQTtBQUVBO0VBRUksWUFBQTtFQUNBLGlCQUFBO0VFNUVBLG9CQUFBO0VBQUEsb0JBQUE7RUFBQSxhQUFBO0VBQ0EsOEJBQUE7RUFBQSw2QkFBQTtNQUFBLHVCQUFBO1VBQUEsbUJBQUE7RUY2RUEsd0JBQUE7TUFBQSxxQkFBQTtVQUFBLHVCQUFBO0VBQ0EseUJBQUE7TUFBQSxzQkFBQTtVQUFBLG1CQUFBO0VBQ0EsNENBQUE7VUFBQSxvQ0FBQTtFQUNBLGtCQUFBO0FDckJKO0FEc0JJO0VBRUksWUFBQTtBQ3JCUjs7QUQyQkEsMkRBQUE7QUFDQSwyREFBQTtBQUNBLDJEQUFBO0FBRUE7RUFFSSx5QkQzRlM7RUM0RlQsWUFBQTtFRWpHQSxvQkFBQTtFQUFBLG9CQUFBO0VBQUEsYUFBQTtFQUNBLDhCQUFB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 */

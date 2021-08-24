@@ -1,14 +1,5 @@
-/* --------------- Color chart --------------- */
-
-$color-primary: #9356DC;
-$color-secondary: #FF79DA;
-$color-tertiary: #99E2D0;
-$color-primarylight: #F5EDFF;
-$lightgrey: #F6F6F6;
-$middlegrey: #EAEAEA;
-$darkgrey: #363636;
-$locicongrey: #353535;
-$foncicongrey: #646464;
+@import "./utils/variables";
+@import "./utils/mixins";
 
 
 /* --------------- Fonts --------------- */
@@ -52,21 +43,6 @@ h1, h2, h3
 h4, p
 {
     font-weight: 400;
-}
-
-
-/* --------------- Mixins --------------- */
-
-@mixin flex-row()
-{
-    display: flex;
-    flex-direction: row;
-}
-
-@mixin flex-col
-{
-    display: flex;
-    flex-direction: column;
 }
 
 

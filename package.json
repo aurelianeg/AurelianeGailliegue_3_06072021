@@ -1,0 +1,21 @@
+{
+  "name": "ohmyfood_site",
+  "version": "1.0.0",
+  "description": "Creation of Ohmyfood website based on the provided models",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./css/styles.css --style expanded",
+    "prefix": "postcss ./css/styles.css --use autoprefixer -d ./css/prefixed/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aurelianeg/ohmyfood-site.git"
+  },
+  "author": "Auréliane Gailliègue",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aurelianeg/ohmyfood-site/issues"
+  },
+  "homepage": "https://github.com/aurelianeg/ohmyfood-site#readme",
+  "browserslist": "last 4 versions"
+}
