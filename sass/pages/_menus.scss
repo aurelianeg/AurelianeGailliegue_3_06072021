@@ -1,6 +1,14 @@
+@import "../utils/mixins";
+@import "../utils/variables";
+
 /* ====================================== */
 /* =============== HEADER =============== */
 /* ====================================== */
+
+#header_menus
+{
+    box-shadow: none;
+}
 
 .return
 {
@@ -23,18 +31,27 @@
 
 .menu_img
 {
-    width: 100%;
+    width: 375px;
+    /*position: absolute;*/
+    z-index: 1;
 }
 
 .menu
 {
+    @include flex-col(auto, center);
+    z-index: 2;
+    top: 250px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
     padding: 20px;
+    background-color: $lightgrey;
 
     &_header
     {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+        width: 100%;
+        @include flex-row(space-between, space-between);
+        margin-left: 10px;
+        margin-right: 10px;
 
         &_title
         {
@@ -47,5 +64,57 @@
             padding: 10px;
             align-self: center;
         }
+    }
+
+    &_desc
+    {
+        &_s
+        {
+            &_title
+            {
+                margin-left: 5px;
+                padding-bottom: 5px;
+                border-bottom: 4px solid $color-tertiary;
+            }
+
+            &_el
+            {
+                height: 70px;
+                margin-top: 10px;
+                margin-bottom: 10px;
+                padding: 15px;
+                background-color: white;
+                border-radius: 20px;
+
+                @include flex-row(space-between, auto);
+                &_desc
+                {
+                    @include flex-col(space-between, auto);
+                    h2, h4
+                    {
+                        margin: 0px;
+                    }
+                }
+                &_prix
+                {
+                    @include flex-row(center, flex-end);
+                    margin: 0px;
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+
+    &_button
+    {
+        margin-top: 40px;
+        margin-bottom: 60px;
+        padding-left: 55px;
+        padding-right: 55px;
+        border: 0px;
+        border-radius: 30px;
+        background: linear-gradient(175deg, $color-secondary 0%, $color-primary 100%);
+        color: white;
+        box-shadow: 0px 6px 11px 0px $buttonshadowgrey;
     }
 }

@@ -3,36 +3,58 @@
 Text : Roboto */
 @font-face {
   font-family: "Roboto";
-  src: url("assets/fonts/roboto/Roboto-Thin-webfont.woff") format("woff");
-  src: url("assets/fonts/roboto/Roboto-Thin.ttf") format("truetype");
+  src: url("../../assets/fonts/roboto/Roboto-Thin-webfont.woff") format("woff");
+  src: url("../../assets/fonts/roboto/Roboto-Thin.ttf") format("truetype");
   font-weight: 400;
 }
 @font-face {
   font-family: "Roboto";
-  src: url("assets/fonts/roboto/Roboto-Bold-webfont.woff") format("woff");
-  src: url("assets/fonts/roboto/Roboto-Bold.ttf") format("truetype");
+  src: url("../../assets/fonts/roboto/Roboto-Regular.ttf") format("truetype");
   font-weight: 500;
 }
 @font-face {
+  font-family: "Roboto";
+  src: url("../../assets/fonts/roboto/Roboto-Bold-webfont.woff") format("woff");
+  src: url("../../assets/fonts/roboto/Roboto-Bold.ttf") format("truetype");
+  font-weight: 600;
+}
+@font-face {
   font-family: "Shrikhand";
-  src: url("assets/fonts/shrikhand/Shrikhand-Regular.otf") format("opentype");
+  src: url("../../assets/fonts/shrikhand/Shrikhand-Regular.otf") format("opentype");
   font-weight: 500;
 }
 html {
   font-family: "Roboto", "Shrikhand", "Trebuchet MS", Arial, sans-serif;
 }
 
-h1, h2, h3, strong {
+h1, h2, h3 {
+  font-weight: 600;
+}
+
+h3, p {
   font-weight: 500;
 }
 
-h4, p {
+h4 {
   font-weight: 400;
 }
 
+h1 {
+  font-size: 25px;
+}
+
+h2, h3, h4 {
+  font-size: large;
+}
+
+/* --------------- Color chart --------------- */
 /* ====================================== */
 /* =============== HEADER =============== */
 /* ====================================== */
+#header_menus {
+  box-shadow: none;
+}
+
 .return {
   padding: 25px;
   position: absolute;
@@ -48,16 +70,31 @@ h4, p {
 /* =============== SECTION - MENU =============== */
 /* ============================================== */
 .menu_img {
-  width: 100%;
+  width: 375px;
+  /*position: absolute;*/
+  z-index: 1;
 }
 
 .menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: auto;
+  align-items: center;
+  z-index: 2;
+  top: 250px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
   padding: 20px;
+  background-color: #F6F6F6;
 }
 .menu_header {
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: space-between;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 .menu_header_title {
   font-family: "Shrikhand", "Trebuchet MS", Arial, sans-serif;
@@ -66,6 +103,51 @@ h4, p {
   height: 25px;
   padding: 10px;
   align-self: center;
+}
+.menu_desc_s_title {
+  margin-left: 5px;
+  padding-bottom: 5px;
+  border-bottom: 4px solid #99E2D0;
+}
+.menu_desc_s_el {
+  height: 70px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 15px;
+  background-color: white;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: auto;
+}
+.menu_desc_s_el_desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: auto;
+}
+.menu_desc_s_el_desc h2, .menu_desc_s_el_desc h4 {
+  margin: 0px;
+}
+.menu_desc_s_el_prix {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+  margin: 0px;
+  margin-right: 10px;
+}
+.menu_button {
+  margin-top: 40px;
+  margin-bottom: 60px;
+  padding-left: 55px;
+  padding-right: 55px;
+  border: 0px;
+  border-radius: 30px;
+  background: linear-gradient(175deg, #FF79DA 0%, #9356DC 100%);
+  color: white;
+  box-shadow: 0px 6px 11px 0px #C5C5C5;
 }
 
 /* --------------- Color chart --------------- */
@@ -96,13 +178,13 @@ body {
   position: relative;
 }
 .header .logo {
-  height: 25px;
+  height: 30px;
 }
 
 /* ====================================================== */
 /* =============== SECTION - LOCALISATION =============== */
 /* ====================================================== */
-#loc_s {
+.loc_s {
   background-color: #EAEAEA;
   height: 50px;
   display: flex;
@@ -110,7 +192,7 @@ body {
   justify-content: center;
   align-items: center;
 }
-#loc_s h3 {
+.loc_s h3 {
   color: #353535;
 }
 
@@ -122,10 +204,10 @@ body {
 /* ======================================================== */
 /* =============== SECTION - FONCTIONNEMENT =============== */
 /* ======================================================== */
-#pres_s {
+.pres_s {
   background-color: #F6F6F6;
-  height: 285px;
-  padding: 20px;
+  padding: 30px;
+  padding-top: 20px;
   padding-bottom: 55px;
   display: flex;
   flex-direction: column;
@@ -133,16 +215,33 @@ body {
   align-items: center;
   text-align: center;
 }
+.pres_s h1 {
+  width: 250px;
+}
+.pres_s h4 {
+  margin: 0px;
+  margin-bottom: 35px;
+}
+.pres_s_button {
+  padding-left: 25px;
+  padding-right: 25px;
+  border: 0px;
+  border-radius: 30px;
+  background: linear-gradient(175deg, #FF79DA 0%, #9356DC 100%);
+  color: white;
+  box-shadow: 0px 6px 11px 0px #C5C5C5;
+}
 
 /* ======================================================== */
 /* =============== SECTION - FONCTIONNEMENT =============== */
 /* ======================================================== */
-#fonc_s {
+.fonc_s {
   padding: 15px;
+  padding-top: 30px;
+  padding-bottom: 50px;
 }
 
 .fonc {
-  height: 70px;
   margin-top: 10px;
   margin-bottom: 10px;
   display: flex;
@@ -166,7 +265,9 @@ body {
 .fonc_block {
   background-color: #F6F6F6;
   width: 100%;
-  margin-left: 15px;
+  height: 70px;
+  margin: 10px;
+  margin-right: 0px;
   padding-left: 20px;
   border-radius: 20px;
   box-shadow: 0px 2px 10px 0px #E7E7E7;
@@ -184,39 +285,26 @@ body {
 /* ===================================================== */
 /* =============== SECTION - RESTAURANTS =============== */
 /* ===================================================== */
-#rest_s {
+.rest_s {
   background-color: #F6F6F6;
-  padding: 20px;
   padding-top: 30px;
-  padding-bottom: 60px;
+  padding-bottom: 45px;
 }
-
-#rest_grid {
-  display: grid;
-  grid-template-rows: repeat(4, 1fr);
-  grid-gap: 20px;
-  grid-template-areas: "rest1" "rest2" "rest3" "rest4";
-}
-
-#rest1 {
-  grid-area: "rest1";
-}
-
-#rest2 {
-  grid-area: "rest2";
-}
-
-#rest3 {
-  grid-area: "rest3";
-}
-
-#rest4 {
-  grid-area: "rest4";
+.rest_s_title {
+  margin: 0px;
+  padding: 20px;
+  padding-bottom: 10px;
 }
 
 .rest {
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: auto;
+}
+.rest_el {
   height: 250px;
+  margin: 20px;
   border-radius: 20px;
   box-shadow: 0px 0px 10px 2px #E6E6E6;
   display: flex;
@@ -226,14 +314,14 @@ body {
   overflow: hidden;
   position: relative;
 }
-.rest_img {
+.rest_el_img {
   width: 100%;
   height: 70%;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   object-fit: cover;
 }
-.rest_desc {
+.rest_el_desc {
   height: 30%;
   padding: 10px;
   display: flex;
@@ -241,21 +329,21 @@ body {
   justify-content: space-between;
   align-items: auto;
 }
-.rest_desc_txt {
+.rest_el_desc_txt {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: auto;
 }
-.rest_desc_txt h2, .rest_desc_txt h4 {
-  margin: 0px;
+.rest_el_desc_txt h2, .rest_el_desc_txt h4 {
+  margin: 2px;
 }
-.rest_desc_heart {
+.rest_el_desc_heart {
   height: 25px;
   padding: 10px;
   align-self: center;
 }
-.rest_new {
+.rest_el_new {
   position: absolute;
   top: 0px;
   right: 15px;
@@ -264,6 +352,8 @@ body {
   padding-right: 15px;
   background-color: #99E2D0;
   color: #3B8568;
+  border-radius: 2px;
+  box-shadow: 0px 2px 6px 1px #363636;
 }
 
 /* ====================================== */
