@@ -13,59 +13,72 @@
     <body>
         
         <!-- Mettre le loading spinner avant chaque page (index et les autres)
-        En gros c'est une animation qui dure 1 seconde et hop on charge la page-->
+        En gros c'est une animation qui dure 1 seconde et hop on charge la page -->
         <header class="header">
             <img class="logo" src="assets/images/logo/ohmyfood.png" alt="Ohmyfood" />
         </header>
 
         <main>
 
-            <section class="loc_s">
-                <img class="loc_icon" src="assets/icons/map-marker-alt-grey.svg" alt="Lieu" />
-                <h3>Paris, Belleville</h3>
-            </section>
+            <div class="loc_pres_fonc_s">
+                <div class="loc_pres_s">
 
-            <section class="pres_s">
-                <h1>Réservez le menu qui vous convient</h1>
-                <h4>Découvrez des restaurants d'exception, sélectionnés par nos soins.</h4>
-                <button class="pres_s_button" href="#rest_s"><h3>Explorer nos restaurants</h3></button>
-            </section>
+                    <section class="loc_s">
+                        <img class="loc_icon" src="assets/icons/map-marker-alt-grey.svg" alt="Lieu" />
+                        <form class="loc_form" method="post" action="#">
+                            <input class="loc_form_type" type="search" name="" placeholder="Paris, Belleville" />
+                        </form>
+                    </section>
 
-            <section class="fonc_s">
-
-                <h1>Fonctionnement</h1>
-
-                <div class="fonc">
-                    <h3 class="fonc_nb">1</h3>
-                    <div class="fonc_block">
-                        <img class="fonc_block_icon" src="assets/icons/mobile-alt-grey.svg" alt="" />
-                        <h3>Choisissez un restaurant</h3>
-                    </div>
+                    <section class="pres_s">
+                        <h1>Réservez le menu qui vous convient</h1>
+                        <h4>Découvrez des restaurants d'exception, sélectionnés par nos soins.</h4>
+                        <a href="#rest_s"><h3>Explorer nos restaurants</h3></a>
+                    </section>
+                    
                 </div>
 
-                <div class="fonc">
-                    <h3 class="fonc_nb">2</h3>
-                    <div class="fonc_block">
-                        <img class="fonc_block_icon" src="assets/icons/list-ul-grey.svg" alt="" />
-                        <h3>Composez votre menu</h3>
+                <section class="fonc_s">
+
+                    <h1>Fonctionnement</h1>
+
+                    <div class="fonc">
+
+                        <div class="fonc_el">
+                            <h3 class="fonc_el_nb">1</h3>
+                            <div class="fonc_el_block">
+                                <img class="fonc_el_block_icon" src="assets/icons/mobile-alt-grey.svg" alt="" />
+                                <h3>Choisissez un restaurant</h3>
+                            </div>
+                        </div>
+
+                        <div class="fonc_el">
+                            <h3 class="fonc_el_nb">2</h3>
+                            <div class="fonc_el_block">
+                                <img class="fonc_el_block_icon" src="assets/icons/list-ul-grey.svg" alt="" />
+                                <h3>Composez votre menu</h3>
+                            </div>
+                        </div>
+
+                        <div class="fonc_el">
+                            <h3 class="fonc_el_nb">3</h3>
+                            <div class="fonc_el_block">
+                                <img class="fonc_el_block_icon" src="assets/icons/store-grey.svg" alt="" />
+                                <h3>Dégustez au restaurant</h3>
+                            </div>
+                        </div>
+                        
                     </div>
-                </div>
 
-                <div class="fonc">
-                    <h3 class="fonc_nb">3</h3>
-                    <div class="fonc_block">
-                        <img class="fonc_block_icon" src="assets/icons/store-grey.svg" alt="" />
-                        <h3>Dégustez au restaurant</h3>
-                    </div>
-                </div>
+                </section>
 
-            </section>
+            </div>
 
-            <section class="rest_s">
+            <section id="rest_s">
 
-                <h1 class="rest_s_title">Restaurants</h1>
+                <h1 id="rest_s_title">Restaurants</h1>
 
-                <div id="rest">
+                <div class="rest">
 
                     <a class="rest_el" href="menu_lapalettedugout.html">
                         <img class="rest_el_img" src="assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="La palette du goût" />

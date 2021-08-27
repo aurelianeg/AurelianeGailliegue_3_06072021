@@ -17,7 +17,6 @@ a, a:visited
 
 body
 {
-    max-width: 375px;
     background-color: white;
     margin: 0 auto;
 }
@@ -45,14 +44,33 @@ body
 /* =============== SECTION - LOCALISATION =============== */
 /* ====================================================== */
 
+.loc_pres_fonc_s
+{
+    @include media-min("desktop-min")
+    {
+        @include flex-row(space-between, center);
+    }
+}
+
+.loc_pres_s
+{
+    @include media-min("desktop-min")
+    {
+        @include flex-row(auto, center);
+        width: 70%;
+        height: 100%;
+    }
+}
+
 .loc_s
 {
     background-color: $middlegrey;
     height: 50px;
     @include flex-row(center, center);
-    h3
+    @include media-min("desktop-min")
     {
-        color: $locicongrey;
+        width: 60%;
+        height: 250px;
     }
 }
 
@@ -60,6 +78,32 @@ body
 {
     height: 18px;
     margin-right: 15px;
+}
+
+.loc_form
+{
+    width: 160px;
+
+    &_type
+    {
+        background-color: $middlegrey;
+        width: 100%;
+        border: 0px;
+        padding: 10px;
+        padding-top: 12px;
+
+        &::placeholder
+        {
+            color: $locicongrey;
+            opacity: 1;
+        }
+
+        &:focus
+        {
+            outline-color: $color-primary;
+            color: $locicongrey;
+        }
+    }     
 }
 
 
@@ -70,32 +114,46 @@ body
 .pres_s
 {
     background-color: $lightgrey;
+    height: 205px;
     padding: 30px;
     padding-top: 20px;
     padding-bottom: 55px;
     @include flex-col(space-between, center);
     text-align: center;
+    @include media-min("desktop-min")
+    {
+        width: 100%;
+        background-color: white;
+        @include flex-col(center, center);
+    }
 
     h1
     {
-        width: 250px;
+        width: 80%;
     }
 
     h4
     {
+        width: 80%;
         margin: 0px;
         margin-bottom: 35px;
     }
 
-    &_button
+    a
     {
         padding-left: 25px;
         padding-right: 25px;
         border: 0px;
         border-radius: 30px;
-        background: linear-gradient(175deg, $color-secondary 0%, $color-primary 100%);
         color: white;
+        background: linear-gradient(175deg, $color-secondary 0%, $color-primary 100%);
         box-shadow: 0px 6px 11px 0px $buttonshadowgrey;
+
+        &:hover
+        {
+            background: linear-gradient(175deg, lighten($color-secondary, 5%) 0%, lighten($color-primary, 5%) 100%);
+            box-shadow: 0px 8px 11px 2px $buttonshadowgrey;
+        }
     }
 }
 
@@ -109,42 +167,72 @@ body
     padding: 15px;
     padding-top: 30px;
     padding-bottom: 50px;
+    @include media-min("desktop-min")
+    {
+        width: 30%;
+        padding-left: 30px;
+        @include flex-col(space-between, space-between);
+    }
 }
 
 .fonc
 {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    @include flex-row(auto, center);
-
-    &_nb
+    @include media-between("tablet-min", "tablet-max")
     {
-        width: 20px;
-        height: 20px;
-        background-color: $color-primary;
-        color: white;
-        padding: 5px;
-        border-radius: 50px;
-        @include flex-row(center, auto);
-        position: absolute;
+        @include flex-row(space-between, center);
     }
 
-    &_block
+    &_el
     {
-        background-color: $lightgrey;
         width: 100%;
-        height: 70px;
-        margin: 10px;
-        margin-right: 0px;
-        padding-left: 20px;
-        border-radius: 20px;
-        box-shadow: 0px 2px 10px 0px #E7E7E7;
-        @include flex-row(auto, center);
-        &_icon
+        margin-top: 10px;
+        margin-bottom: 10px;
+        @include flex-row(space-between, center);
+
+        &_nb
         {
-            width: 20%;
+            width: 20px;
             height: 20px;
-            margin-right: 5px;
+            background-color: $color-primary;
+            color: white;
+            padding: 5px;
+            border-radius: 50px;
+            @include flex-row(center, auto);
+            position: absolute;
+        }
+
+        &_block
+        {
+            background-color: $lightgrey;
+            width: 100%;
+            height: 70px;
+            margin: 10px;
+            margin-right: 0px;
+            @include media-min("tablet-min")
+            {
+                margin-right: 10px;
+            }
+            padding-left: 20px;
+            border-radius: 20px;
+            box-shadow: 0px 4px 10px 2px #E7E7E7;
+            @include flex-row(auto, center);
+
+            &:hover
+            {
+                background-color: $color-primarylight;
+            }
+
+            &_icon
+            {
+                width: 20%;
+                height: 20px;
+                margin-right: 5px;
+            }
+
+            h3
+            {
+                margin-right: 10px;
+            }
         }
     }
 }
@@ -154,7 +242,7 @@ body
 /* =============== SECTION - RESTAURANTS =============== */
 /* ===================================================== */
 
-.rest_s
+#rest_s
 {
     background-color: $lightgrey;
     padding-top: 30px;
@@ -171,6 +259,11 @@ body
 .rest
 {
     @include flex-col(space-between, auto);
+    @include media-min("tablet-min")
+    {
+        @include flex-row(space-between, auto);
+        flex-wrap: wrap;
+    }
 
     &_el
     {
@@ -181,6 +274,15 @@ body
         @include flex-col(auto, auto);
         overflow: hidden;
         position: relative;
+        @include media-between("tablet-min", "tablet-max")
+        {
+            width: 44%;
+        }
+        @include media-min("desktop-min")
+        {
+            width: 21%;
+        }
+
 
         &_img
         {
@@ -194,10 +296,10 @@ body
         &_desc
         {
             height: 30%;
-            padding: 10px;
             @include flex-row(space-between, auto);
             &_txt
             {
+                margin: 10px;
                 @include flex-col(center, auto);
                 h2, h4
                 {
@@ -206,6 +308,7 @@ body
             }
             &_heart
             {
+                margin-right: 10px;
                 height: 25px;
                 padding: 10px;
                 align-self: center;
@@ -249,6 +352,7 @@ body
     &_el
     {
         @include flex-row(auto, center);
+
         &_icon
         {
             height: 15px;
@@ -261,10 +365,10 @@ body
         color: white;
         margin-top: 5px;
         margin-bottom: 5px;
-    }
 
-    a:hover, a:active
-    {
-        color: $color-primary;
+        &:hover
+        {
+            color: $color-tertiary;
+        }
     }
 }

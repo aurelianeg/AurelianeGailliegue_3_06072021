@@ -11,3 +11,13 @@ $darkgrey: #363636;
 $locicongrey: #353535;
 $foncicongrey: #646464;
 $buttonshadowgrey: #C5C5C5;
+
+/* --------------- Breakpoints --------------- */
+
+$breakpoints:
+(
+    "mobile-max": 767px,
+    "tablet-min": 768px,
+    "tablet-max": 1023px,
+    "desktop-min": 1024px
+);

@@ -31,65 +31,86 @@
 
 .menu_img
 {
-    width: 375px;
+    width: 100%;
     /*position: absolute;*/
     z-index: 1;
 }
 
 .menu
 {
-    @include flex-col(auto, center);
+    @include flex-col(auto, auto);
     z-index: 2;
     top: 250px;
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
-    padding: 20px;
+    padding: 10px;
     background-color: $lightgrey;
 
     &_header
     {
-        width: 100%;
         @include flex-row(space-between, space-between);
-        margin-left: 10px;
-        margin-right: 10px;
+        margin-left: 5px;
+        margin-right: 5px;
+        padding: 10px;
 
         &_title
         {
-            font-family: "Shrikhand", "Trebuchet MS", Arial, sans-serif;
+            margin-top: 20px;
+            margin-bottom: 10px;
         }
 
         &_heart
         {
             height: 25px;
-            padding: 10px;
+            padding: 15px;
             align-self: center;
         }
     }
 
     &_desc
     {
+        @include media-min("desktop-min")
+        {
+            @include flex-row(space-between, space-between);
+        }
+
         &_s
         {
+            margin: 10px;
+            @include media-min("desktop-min")
+            {
+                width: 90%;
+            }
             &_title
             {
-                margin-left: 5px;
-                padding-bottom: 5px;
-                border-bottom: 4px solid $color-tertiary;
+                margin: 5px;
+                margin-top: 35px;
+            }
+
+            &_line
+            {
+                width: 40px;
+                height: 0px;
+                margin: 5px;
+                margin-bottom: 15px;
+                border-bottom: 3px solid $color-tertiary;
             }
 
             &_el
             {
-                height: 70px;
+                @include flex-row(space-between, auto);
                 margin-top: 10px;
                 margin-bottom: 10px;
                 padding: 15px;
+                height: 45px;
                 background-color: white;
                 border-radius: 20px;
+                box-shadow: 0px 6px 10px 0px $middlegrey;
 
-                @include flex-row(space-between, auto);
                 &_desc
                 {
                     @include flex-col(space-between, auto);
+
                     h2, h4
                     {
                         margin: 0px;
@@ -97,6 +118,7 @@
                 }
                 &_prix
                 {
+                    font-weight: 600;
                     @include flex-row(center, flex-end);
                     margin: 0px;
                     margin-right: 10px;
@@ -107,6 +129,7 @@
 
     &_button
     {
+        align-self: center;
         margin-top: 40px;
         margin-bottom: 60px;
         padding-left: 55px;
@@ -116,5 +139,11 @@
         background: linear-gradient(175deg, $color-secondary 0%, $color-primary 100%);
         color: white;
         box-shadow: 0px 6px 11px 0px $buttonshadowgrey;
+
+        &:hover
+        {
+            background: linear-gradient(175deg, lighten($color-secondary, 5%) 0%, lighten($color-primary, 5%) 100%);
+            box-shadow: 0px 8px 11px 2px $buttonshadowgrey;
+        }
     }
 }

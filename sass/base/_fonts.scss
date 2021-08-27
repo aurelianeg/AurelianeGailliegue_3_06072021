@@ -33,9 +33,14 @@ Text : Roboto */
     font-weight: 500;
 }
 
-html
+html, .loc_form_type
 {
-    font-family: "Roboto", "Shrikhand", "Trebuchet MS", Arial, sans-serif;
+    font-family: "Roboto", "Trebuchet MS", Arial, sans-serif;
+}
+
+.menu_header_title
+{
+    font-family: "Shrikhand", "Trebuchet MS", Arial, sans-serif;
 }
 
 h1, h2, h3
@@ -43,7 +48,7 @@ h1, h2, h3
     font-weight: 600;
 }
 
-h3, p
+h3, p, input
 {
     font-weight: 500;
 }
@@ -53,12 +58,22 @@ h4
     font-weight: 400;
 }
 
+.menu_desc_s_el_desc h2
+{
+    font-weight: 500;
+}
+
 h1
 {
     font-size: 25px;
 }
 
-h2, h3, h4
+h2, h3, h4, .loc_form_type
 {
     font-size: large;
+}
+
+p, .menu_desc_s_el h4
+{
+    font-size: medium;
 }
