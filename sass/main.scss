@@ -22,7 +22,8 @@ body
 {
     background-color: white;
     margin: 0 auto;
-    min-height: 100vh;
+    height: 100vh;
+    @include flex-col(space-between, stretch); /* To remove the blank space under footer */
 }
 
 
@@ -32,14 +33,23 @@ body
 
 .header
 {
-    height: 55px;
+    min-height: 55px;
     padding-top: 10px;
     @include flex-row(center, center);
     box-shadow: 0px 0px 11px 4px #CECECE;
     position: relative;
-    .logo
+
+    &_logo
     {
         height: 30px;
+    }
+}
+
+main
+{
+    @include media-min("largedesktop-min")
+    {
+        height: 100%;
     }
 }
 
@@ -52,70 +62,72 @@ body
 {
     @include media-min("desktop-min")
     {
-        @include flex-row(space-between, center);
+        @include flex-row(space-between, auto);
     }
+
 }
 
 .loc_pres_s
 {
     @include media-min("desktop-min")
     {
-        @include flex-row(auto, center);
-        width: 70%;
-        height: 100%;
+        @include flex-col(space-between, auto);
+        width: 55%;
     }
 }
 
-.loc_s
+.loc
 {
     background-color: $middlegrey;
     height: 50px;
     @include flex-row(center, center);
     @include media-min("desktop-min")
     {
-        width: 60%;
-        height: 250px;
+        width: 100%;
+        height: 100px;
+    }
+
+    &_icon
+    {
+        height: 18px;
+        margin-right: 15px;
+    }
+
+    &_form
+    {
+        width: 160px;
+
+        &_type
+        {
+            background-color: $middlegrey;
+            width: 100%;
+            border: 0px;
+            padding: 10px;
+            padding-top: 12px;
+
+            &::placeholder
+            {
+                color: $locicongrey;
+                opacity: 1;
+            }
+
+            &:focus
+            {
+                outline-color: $color-primary;
+                color: $locicongrey;
+            }
+        }     
     }
 }
 
-.loc_icon
-{
-    height: 18px;
-    margin-right: 15px;
-}
 
-.loc_form
-{
-    width: 160px;
-
-    &_type
-    {
-        background-color: $middlegrey;
-        width: 100%;
-        border: 0px;
-        padding: 10px;
-        padding-top: 12px;
-
-        &::placeholder
-        {
-            color: $locicongrey;
-            opacity: 1;
-        }
-
-        &:focus
-        {
-            outline-color: $color-primary;
-            color: $locicongrey;
-        }
-    }     
-}
 
 
 /* ======================================================== */
 /* =============== SECTION - FONCTIONNEMENT =============== */
 /* ======================================================== */
 
-.pres_s
+.pres
 {
     background-color: $lightgrey;
     height: 205px;
@@ -126,9 +138,9 @@ body
     text-align: center;
     @include media-min("desktop-min")
     {
-        width: 100%;
         background-color: white;
         @include flex-col(center, center);
+        padding-bottom: 90px;
     }
 
     h1
@@ -173,7 +185,7 @@ body
     padding-bottom: 50px;
     @include media-min("desktop-min")
     {
-        width: 30%;
+        width: 40%;
         padding-left: 30px;
         @include flex-col(space-between, space-between);
     }
@@ -346,7 +358,7 @@ body
     padding: 25px;
     padding-bottom: 30px;
 
-    .logo
+    &_logo
     {
         height: 18px;
         margin-top: 5px;
