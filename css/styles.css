@@ -61,6 +61,10 @@ p, .menu_desc_s_el h4 {
 
 /* --------------- Color chart --------------- */
 /* --------------- Breakpoints --------------- */
+#body_menus {
+  height: 100%;
+}
+
 /* ====================================== */
 /* =============== HEADER =============== */
 /* ====================================== */
@@ -82,10 +86,31 @@ p, .menu_desc_s_el h4 {
 /* ============================================== */
 /* =============== SECTION - MENU =============== */
 /* ============================================== */
+#main_menus {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: space-between;
+}
+@media screen and (min-width: 1440px) {
+  #main_menus {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: space-between;
+  }
+}
+
 .menu_img {
   width: 100%;
+  object-fit: cover;
   /*position: absolute;*/
   z-index: 1;
+}
+@media screen and (min-width: 1440px) {
+  .menu_img {
+    width: 30%;
+  }
 }
 
 .menu {
@@ -94,11 +119,19 @@ p, .menu_desc_s_el h4 {
   justify-content: auto;
   align-items: auto;
   z-index: 2;
-  top: 250px;
+  /*top: 250px;*/
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
   padding: 10px;
   background-color: #F6F6F6;
+}
+@media screen and (min-width: 1440px) {
+  .menu {
+    width: 70%;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 30px;
+  }
 }
 .menu_header {
   display: flex;
@@ -201,10 +234,14 @@ a, a:visited {
   text-decoration: none;
 }
 
-/* --------------- Body --------------- */
+html {
+  min-height: 100%;
+}
+
 body {
   background-color: white;
   margin: 0 auto;
+  min-height: 100vh;
 }
 
 /* ====================================== */

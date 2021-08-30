@@ -13,12 +13,16 @@ a, a:visited
     text-decoration: none;
 }
 
-/* --------------- Body --------------- */
+html
+{
+    min-height: 100%;
+}
 
 body
 {
     background-color: white;
     margin: 0 auto;
+    min-height: 100vh;
 }
 
 

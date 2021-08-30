@@ -1,6 +1,13 @@
 @import "../utils/mixins";
 @import "../utils/variables";
 
+
+#body_menus
+{
+    height: 100%;
+}
+
+
 /* ====================================== */
 /* =============== HEADER =============== */
 /* ====================================== */
@@ -29,22 +36,45 @@
 /* =============== SECTION - MENU =============== */
 /* ============================================== */
 
+#main_menus
+{
+    @include flex-col(space-between, space-between);
+    @include media-min("bigdesktop-min")
+    {
+        @include flex-row(space-between, space-between);
+    }
+}
+
 .menu_img
 {
     width: 100%;
+    object-fit: cover;
+    @include media-min("bigdesktop-min")
+    {
+        width: 30%;
+    }
     /*position: absolute;*/
     z-index: 1;
+    
 }
 
 .menu
 {
+    
     @include flex-col(auto, auto);
     z-index: 2;
-    top: 250px;
+    /*top: 250px;*/
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
     padding: 10px;
     background-color: $lightgrey;
+    @include media-min("bigdesktop-min")
+    {
+        width: 70%;
+        border-top-left-radius: 30px;
+        border-top-right-radius: 0px;
+        border-bottom-left-radius: 30px;
+    }
 
     &_header
     {
