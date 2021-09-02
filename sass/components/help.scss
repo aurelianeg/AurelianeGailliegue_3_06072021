@@ -1,0 +1,6 @@
+@for $i from 1 through 3 {
+    &--anim-#{$i} {
+            transform: translateX(-108%);
+            transition: transform 500ms $easing 50ms*$i;
+        }
+    }

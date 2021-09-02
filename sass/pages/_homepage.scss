@@ -1,0 +1,326 @@
+@import "../utils/mixins";
+@import "../utils/variables";
+
+/* ====================================== */
+/* =============== HEADER =============== */
+/* ====================================== */
+
+.header
+{
+    &--homepage
+    {
+        box-shadow: 0px 0px 11px 4px #CECECE;
+        z-index: 1;
+    }
+}
+
+/* ====================================================== */
+/* =============== SECTION - LOCALISATION =============== */
+/* ====================================================== */
+
+.loc_pres_fonc_s
+{
+    @include media-min("desktop-min")
+    {
+        @include flex-row(space-between, auto);
+    }
+
+}
+
+.loc_pres_s
+{
+    @include media-min("desktop-min")
+    {
+        @include flex-col(space-between, auto);
+        width: 55%;
+    }
+}
+
+.localisation
+{
+    background-color: $middlegrey;
+    height: 50px;
+    @include flex-row(center, center);
+    @include media-min("desktop-min")
+    {
+        width: 100%;
+        height: 100px;
+    }
+
+    &_icon
+    {
+        height: 18px;
+        margin-right: 15px;
+    }
+
+    &_research
+    {
+        width: 160px;
+
+        &_type
+        {
+            background-color: $middlegrey;
+            width: 100%;
+            border: 0px;
+            padding: 10px;
+            padding-top: 12px;
+
+            &::placeholder
+            {
+                color: $locicongrey;
+                opacity: 1;
+            }
+
+            &:focus
+            {
+                outline-color: $color-primary;
+                color: $locicongrey;
+            }
+        }     
+    }
+}
+
+
+/* ======================================================== */
+/* =============== SECTION - FONCTIONNEMENT =============== */
+/* ======================================================== */
+
+.presentation
+{
+    background-color: $lightgrey;
+    height: 205px;
+    padding: 30px;
+    padding-top: 20px;
+    padding-bottom: 55px;
+    @include flex-col(space-between, center);
+    text-align: center;
+    @include media-min("desktop-min")
+    {
+        background-color: white;
+        @include flex-col(center, center);
+        padding-bottom: 90px;
+    }
+
+    &_title
+    {
+        width: 80%;
+    }
+
+    &_subtitle
+    {
+        width: 80%;
+        margin: 0px;
+        margin-bottom: 35px;
+    }
+
+    &_btn
+    {
+        padding-left: 25px;
+        padding-right: 25px;
+        color: white;
+    }
+}
+
+
+
+/* ======================================================== */
+/* =============== SECTION - FONCTIONNEMENT =============== */
+/* ======================================================== */
+
+.fonctionnement
+{
+    padding: 15px;
+    padding-top: 30px;
+    padding-bottom: 50px;
+    @include media-min("desktop-min")
+    {
+        width: 40%;
+        padding-left: 30px;
+        @include flex-col(space-between, space-between);
+    }
+}
+
+.fonc
+{
+    &_container
+    {
+        @include media-between("tablet-min", "tablet-max")
+        {
+            @include flex-row(space-between, center);
+        }
+    }
+
+    &_item
+    {
+        width: 100%;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        @include flex-row(space-between, center);
+
+        &_number
+        {
+            width: 20px;
+            height: 20px;
+            background-color: $color-primary;
+            color: white;
+            padding: 5px;
+            border-radius: 50px;
+            @include flex-row(center, auto);
+            position: absolute;
+            z-index: 2;
+        }
+
+        &_container
+        {
+            background-color: $lightgrey;
+            width: 100%;
+            height: 70px;
+            margin: 10px;
+            margin-right: 0px;
+            @include media-min("tablet-min")
+            {
+                margin-right: 10px;
+            }
+            padding-left: 20px;
+            border-radius: 20px;
+            box-shadow: 0px 4px 10px 2px #E7E7E7;
+            @include flex-row(auto, center);
+            position: relative;
+            z-index: 1;
+
+            &:hover
+            {
+                &::after
+                {
+                    opacity: 1;
+                }
+            }
+
+            &::after
+            {
+                content: "";
+                @include position-abs-zero;
+                background-color: $color-primarylight;
+                opacity: 0;
+                z-index: -1;
+                transition: all 250ms;
+            }
+
+            &_icon
+            {
+                width: 20%;
+                height: 20px;
+                margin-right: 5px;
+            }
+
+            h3
+            {
+                margin-right: 10px;
+            }
+        }
+    }
+}
+
+
+/* ===================================================== */
+/* =============== SECTION - RESTAURANTS =============== */
+/* ===================================================== */
+
+#restaurants
+{
+    background-color: $lightgrey;
+    padding-top: 30px;
+    padding-bottom: 45px;
+
+    &_title
+    {
+        margin: 0px;
+        padding: 20px;
+        padding-bottom: 10px;
+    }
+}
+
+.rest
+{
+    &_container
+    {
+        @include flex-col(space-between, auto);
+        @include media-min("tablet-min")
+        {
+            @include flex-row(space-between, auto);
+            flex-wrap: wrap;
+        }
+    }
+
+    &_card
+    {
+        height: 250px;
+        margin: 20px;
+        border-radius: 20px;
+        box-shadow: 0px 0px 10px 2px #E6E6E6;
+        @include flex-col(auto, auto);
+        overflow: hidden;
+        position: relative;
+        @include media-between("tablet-min", "tablet-max")
+        {
+            width: 44%;
+        }
+        @include media-min("desktop-min")
+        {
+            width: 21%;
+        }
+        transform: scale(1);
+        transition: all 300ms;
+
+        &:hover
+        {
+            transform: scale(1.05);
+            background-color: lighten($color-tertiary, 15%);
+        }
+
+        &_img
+        {
+            width: 100%;
+            height: 70%;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+            object-fit: cover;
+        }
+
+        &_content
+        {
+            height: 30%;
+            @include flex-row(space-between, auto);
+            &_txt
+            {
+                margin: 10px;
+                @include flex-col(center, auto);
+                h2, h4
+                {
+                    margin: 2px;
+                }
+            }
+            &_heart
+            {
+                margin-right: 10px;
+                height: 25px;
+                padding: 10px;
+                align-self: center;
+            }
+        }
+
+        &_new
+        {
+            position: absolute;
+            top: 0px;
+            right: 15px;
+            padding: 5px;
+            padding-left: 15px;
+            padding-right: 15px;
+            background-color: $color-tertiary;
+            color: $color-tertiarydark;
+            border-radius: 2px;
+            box-shadow: 0px 2px 6px 1px $darkgrey;
+        }
+    }
+}

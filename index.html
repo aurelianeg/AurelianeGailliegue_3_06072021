@@ -14,7 +14,7 @@
         
         <!-- Mettre le loading spinner avant chaque page (index et les autres)
         En gros c'est une animation qui dure 1 seconde et hop on charge la page -->
-        <header class="header">
+        <header class="header header--homepage">
             <img class="header_logo" src="assets/images/logo/ohmyfood.png" alt="Ohmyfood" />
         </header>
 
@@ -23,47 +23,47 @@
             <div class="loc_pres_fonc_s">
                 <div class="loc_pres_s">
 
-                    <section class="loc">
-                        <img class="loc_icon" src="assets/icons/map-marker-alt-grey.svg" alt="Lieu" />
-                        <form class="loc_form" method="post" action="#">
-                            <input class="loc_form_type" type="search" name="" placeholder="Paris, Belleville" />
+                    <section class="localisation">
+                        <img class="localisation_icon" src="assets/icons/map-marker-alt-grey.svg" alt="Lieu" />
+                        <form class="localisation_research" method="post" action="#">
+                            <input class="localisation_research_type" type="search" name="" placeholder="Paris, Belleville" />
                         </form>
                     </section>
 
-                    <section class="pres">
-                        <h1>Réservez le menu qui vous convient</h1>
-                        <h4>Découvrez des restaurants d'exception, sélectionnés par nos soins.</h4>
-                        <a class="button" href="#rest_s"><h3>Explorer nos restaurants</h3></a>
+                    <section class="presentation">
+                        <h1 class="presentation_title">Réservez le menu qui vous convient</h1>
+                        <h4 class="presentation_subtitle">Découvrez des restaurants d'exception, sélectionnés par nos soins.</h4>
+                        <a class="presentation_btn btn" href="#restaurants"><h3>Explorer nos restaurants</h3></a>
                     </section>
                     
                 </div>
 
-                <section class="fonc_s">
+                <section class="fonctionnement">
 
                     <h1>Fonctionnement</h1>
 
-                    <div class="fonc">
+                    <div class="fonc_container">
 
-                        <div class="fonc_el">
-                            <h3 class="fonc_el_nb">1</h3>
-                            <div class="fonc_el_block">
-                                <img class="fonc_el_block_icon" src="assets/icons/mobile-alt-grey.svg" alt="" />
+                        <div class="fonc_item">
+                            <h3 class="fonc_item_number">1</h3>
+                            <div class="fonc_item_container">
+                                <img class="fonc_item_container_icon" src="assets/icons/mobile-alt-grey.svg" alt="" />
                                 <h3>Choisissez un restaurant</h3>
                             </div>
                         </div>
 
-                        <div class="fonc_el">
-                            <h3 class="fonc_el_nb">2</h3>
-                            <div class="fonc_el_block">
-                                <img class="fonc_el_block_icon" src="assets/icons/list-ul-grey.svg" alt="" />
+                        <div class="fonc_item">
+                            <h3 class="fonc_item_number">2</h3>
+                            <div class="fonc_item_container">
+                                <img class="fonc_item_container_icon" src="assets/icons/list-ul-grey.svg" alt="" />
                                 <h3>Composez votre menu</h3>
                             </div>
                         </div>
 
-                        <div class="fonc_el">
-                            <h3 class="fonc_el_nb">3</h3>
-                            <div class="fonc_el_block">
-                                <img class="fonc_el_block_icon" src="assets/icons/store-grey.svg" alt="" />
+                        <div class="fonc_item">
+                            <h3 class="fonc_item_number">3</h3>
+                            <div class="fonc_item_container">
+                                <img class="fonc_item_container_icon" src="assets/icons/store-grey.svg" alt="" />
                                 <h3>Dégustez au restaurant</h3>
                             </div>
                         </div>
@@ -74,55 +74,55 @@
 
             </div>
 
-            <section id="rest_s">
+            <section id="restaurants">
 
-                <h1 id="rest_s_title">Restaurants</h1>
+                <h1 id="restaurants_title">Restaurants</h1>
 
-                <div class="rest">
+                <div class="rest_container">
 
-                    <a class="rest_el" href="menu_lapalettedugout.html">
-                        <img class="rest_el_img" src="assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="La palette du goût" />
-                        <div class="rest_el_desc">
-                            <div class="rest_el_desc_txt">
+                    <a class="rest_card" href="menu_lapalettedugout.html">
+                        <img class="rest_card_img" src="assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="La palette du goût" />
+                        <div class="rest_card_content">
+                            <div class="rest_card_content_txt">
                                 <h2>La palette du goût</h2>
                                 <h4>Ménilmontant</h4>
                             </div>
-                            <img class="rest_el_desc_heart" src="assets/icons/heart-regular-black.svg" alt="" />
+                            <img class="rest_card_content_heart" src="assets/icons/heart-regular-black.svg" alt="" />
                         </div>
-                        <p class="rest_el_new">Nouveau</p>
+                        <p class="rest_card_new">Nouveau</p>
                     </a>
 
-                    <a class="rest_el" href="menu_lanoteenchantee.html">
-                        <img class="rest_el_img" src="assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="La note enchantée" />
-                        <div class="rest_el_desc">
-                            <div class="rest_el_desc_txt">
+                    <a class="rest_card" href="menu_lanoteenchantee.html">
+                        <img class="rest_card_img" src="assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="La note enchantée" />
+                        <div class="rest_card_content">
+                            <div class="rest_card_content_txt">
                                 <h2>La note enchantée</h2>
                                 <h4>Charonne</h4>
                             </div>
-                            <img class="rest_el_desc_heart" src="assets/icons/heart-regular-black.svg" alt="" />
+                            <img class="rest_card_content_heart" src="assets/icons/heart-regular-black.svg" alt="" />
                         </div>
-                        <p class="rest_el_new">Nouveau</p>
+                        <p class="rest_card_new">Nouveau</p>
                     </a>
 
-                    <a class="rest_el" href="menu_alafrancaise.html">
-                        <img class="rest_el_img" src="assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="À la française" />
-                        <div class="rest_el_desc">
-                            <div class="rest_el_desc_txt">
+                    <a class="rest_card" href="menu_alafrancaise.html">
+                        <img class="rest_card_img" src="assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="À la française" />
+                        <div class="rest_card_content">
+                            <div class="rest_card_content_txt">
                                 <h2>À la française</h2>
                                 <h4>Cité Rouge</h4>
                             </div>
-                            <img class="rest_el_desc_heart" src="assets/icons/heart-regular-black.svg" alt="" />
+                            <img class="rest_card_content_heart" src="assets/icons/heart-regular-black.svg" alt="" />
                         </div>
                     </a>
 
-                    <a class="rest_el" href="menu_ledelicedessens.html">
-                        <img class="rest_el_img" src="assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Le délice des sens" />
-                        <div class="rest_el_desc">
-                            <div class="rest_el_desc_txt">
+                    <a class="rest_card" href="menu_ledelicedessens.html">
+                        <img class="rest_card_img" src="assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Le délice des sens" />
+                        <div class="rest_card_content">
+                            <div class="rest_card_content_txt">
                                 <h2>Le délice des sens</h2>
                                 <h4>Folie-Méricourt</h4>
                             </div>
-                            <img class="rest_el_desc_heart" src="assets/icons/heart-regular-black.svg" alt="" />
+                            <img class="rest_card_content_heart" src="assets/icons/heart-regular-black.svg" alt="" />
                         </div>
                     </a>
 
@@ -134,16 +134,16 @@
 
         <footer class="footer">
             <img class="footer_logo" src="assets/images/logo/ohmyfood_white.svg" alt="Ohmyfood" />
-            <a class="footer_el" href="#">
-                <img class="footer_el_icon" src="assets/icons/utensils-white.svg" alt="" />
+            <a class="footer_item" href="#">
+                <img class="footer_item_icon" src="assets/icons/utensils-white.svg" alt="" />
                 <p>Proposer un restaurant</p>
             </a>
-            <a class="footer_el" href="#">
-                <img class="footer_el_icon" src="assets/icons/hands-helping-white.svg" alt="" />
+            <a class="footer_item" href="#">
+                <img class="footer_item_icon" src="assets/icons/hands-helping-white.svg" alt="" />
                 <p>Devenir partenaire</p>
             </a>
-            <a class="footer_el" href="#"><p>Mentions légales</p></a>
-            <a class="footer_el" href="mailto:contact@ohmyfood.com"><p>Contact</p></a>
+            <a class="footer_item" href="#"><p>Mentions légales</p></a>
+            <a class="footer_item" href="mailto:contact@ohmyfood.com"><p>Contact</p></a>
         </footer>
 
     </body>
