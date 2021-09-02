@@ -1,0 +1,49 @@
+@keyframes loader
+{
+    100% {
+        opacity: 0;
+        z-index: -1;
+    }
+} 
+
+@keyframes rotation1
+{
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotation2
+{
+    from {
+        transform: rotate(120deg);
+    }
+    to {
+        transform: rotate(480deg);
+    }
+}
+
+@keyframes rotation3
+{
+    from {
+        transform: rotate(240deg);
+    }
+    to {
+        transform: rotate(600deg);
+    }
+}
+
+@keyframes showitem
+{
+    0% {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
