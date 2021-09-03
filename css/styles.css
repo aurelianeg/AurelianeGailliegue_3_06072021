@@ -43,7 +43,7 @@ h4 {
   font-weight: 400;
 }
 
-.menu_details_part_item_txt h2 {
+.menu_details_part_item_txt_description h2, .menu_details_part_item_txt_price {
   font-weight: 500;
 }
 
@@ -55,7 +55,7 @@ h2, h3, h4, .localisation_research_type {
   font-size: large;
 }
 
-p, .menu_details_part_item h4 {
+p, .menu_details_part_item_txt h4 {
   font-size: medium;
 }
 
@@ -249,6 +249,8 @@ p, .menu_details_part_item h4 {
 .presentation_btn {
   padding-left: 25px;
   padding-right: 25px;
+}
+.presentation_btn h3 {
   color: white;
 }
 
@@ -315,28 +317,15 @@ p, .menu_details_part_item h4 {
   flex-direction: row;
   justify-content: auto;
   align-items: center;
-  position: relative;
-  z-index: 1;
+  transition: all 250ms;
 }
 @media screen and (min-width: 768px) {
   .fonc_item_container {
     margin-right: 10px;
   }
 }
-.fonc_item_container:hover::after {
-  opacity: 1;
-}
-.fonc_item_container::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+.fonc_item_container:hover {
   background-color: #F5EDFF;
-  opacity: 0;
-  z-index: -1;
-  transition: all 250ms;
 }
 .fonc_item_container_icon {
   width: 20%;
@@ -626,9 +615,14 @@ p, .menu_details_part_item h4 {
     width: 47%;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
   .menu_details_part {
-    width: 100%;
+    width: 31%;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .menu_details_part {
+    width: 33%;
   }
 }
 .menu_details_part_title {
@@ -649,8 +643,7 @@ p, .menu_details_part_item h4 {
   align-items: auto;
   margin-top: 10px;
   margin-bottom: 10px;
-  padding: 15px;
-  height: 45px;
+  height: 75px;
   background-color: white;
   border-radius: 20px;
   box-shadow: 0px 6px 10px 0px #EAEAEA;
@@ -661,29 +654,64 @@ p, .menu_details_part_item h4 {
 }
 .menu_details_part_item_txt {
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: auto;
+  width: 100%;
+  padding: 15px;
+  transition: all 0.5s;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.menu_details_part_item_txt_description {
+  display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: auto;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
-.menu_details_part_item_txt h2, .menu_details_part_item_txt h4 {
+.menu_details_part_item_txt_description h2, .menu_details_part_item_txt_description h4 {
   margin: 0px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
-.menu_details_part_item_price {
-  font-weight: 600;
+.menu_details_part_item_txt_price {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: flex-end;
   margin: 0px;
   margin-right: 10px;
 }
-.menu_details_part_item .check_bar {
-  background-color: red;
-  width: 150px;
+.menu_details_part_item_check {
+  background-color: #99E2D0;
+  width: 0px;
+  transform: translateX(20px);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s;
+}
+.menu_details_part_item_check_icon {
+  height: 25px;
+  transform: rotate(-360deg);
+}
+.menu_details_part_item:hover .menu_details_part_item_txt {
+  width: calc(100% - 100px);
+}
+.menu_details_part_item:hover .menu_details_part_item_check {
+  width: 70px;
+  transform: translateX(0);
   transform-origin: right;
 }
-.menu_details_part_item:hover + .check > .check_bar {
-  background-color: violet;
+.menu_details_part_item:hover .menu_details_part_item_check_icon {
+  transform: rotate(0deg);
+  transition: all 0.5s;
 }
 .menu_btn {
   align-self: center;
@@ -691,6 +719,7 @@ p, .menu_details_part_item h4 {
   margin-bottom: 60px;
   padding-left: 55px;
   padding-right: 55px;
+  color: white;
 }
 
 .itemdelay_1 {
@@ -822,7 +851,6 @@ body {
   border-radius: 30px;
   background: linear-gradient(175deg, #FF79DA 0%, #9356DC 100%);
   z-index: 1;
-  color: white;
   box-shadow: 0px 6px 11px 0px #C5C5C5;
   transform: scale(1);
   position: relative;

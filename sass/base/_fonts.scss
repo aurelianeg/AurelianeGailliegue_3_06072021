@@ -58,7 +58,7 @@ h4
     font-weight: 400;
 }
 
-.menu_details_part_item_txt h2
+.menu_details_part_item_txt_description h2, .menu_details_part_item_txt_price
 {
     font-weight: 500;
 }
@@ -73,7 +73,7 @@ h2, h3, h4, .localisation_research_type
     font-size: large;
 }
 
-p, .menu_details_part_item h4
+p, .menu_details_part_item_txt h4
 {
     font-size: medium;
 }

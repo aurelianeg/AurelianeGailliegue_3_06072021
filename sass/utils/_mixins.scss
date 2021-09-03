@@ -38,11 +38,9 @@
     }
 }
 
-@mixin position-abs-zero()
+@mixin overflowing-text()
 {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
