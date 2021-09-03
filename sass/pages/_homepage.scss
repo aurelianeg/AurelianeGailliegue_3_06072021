@@ -34,19 +34,19 @@
             &--1
             {
                 border-top: 5px solid $color-primary;
-                animation: rotation1 1s linear 3;
+                animation: rotation1 1.5s linear 3;
             }
 
             &--2
             {
                 border-top: 5px solid $color-secondary;
-                animation: rotation2 1s linear 3;
+                animation: rotation2 1.5s linear 3;
             }
 
             &--3
             {
                 border-top: 5px solid $color-tertiary;
-                animation: rotation3 1s linear 3;
+                animation: rotation3 1.5s linear 3;
             }
         }
     }
@@ -327,7 +327,6 @@
         &:hover
         {
             transform: scale(1.05);
-            background-color: lighten($color-tertiary, 15%);
         }
 
         &_img
@@ -355,9 +354,32 @@
             &_heart
             {
                 margin-right: 10px;
+                width: 25px;
                 height: 25px;
                 padding: 10px;
                 align-self: center;
+                position: absolute;
+                right: 0;
+
+                &--nolike 
+                {
+                    &:hover
+                    {
+                        z-index: 1000;
+                    }
+                }
+
+                &--like
+                {
+                    transform: translateY(20px);
+                    transition: all 1s ease-in-out;
+                    &:hover
+                    {
+                        transform: translateY(0);
+                        background: linear-gradient(175deg, $color-primary 0%, $color-secondary 100%);
+                        z-index: 1;
+                    }
+                }
             }
         }
 

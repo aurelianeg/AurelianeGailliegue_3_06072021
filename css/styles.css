@@ -135,15 +135,15 @@ p, .menu_details_part_item h4 {
 }
 .loader_spin_item--1 {
   border-top: 5px solid #9356DC;
-  animation: rotation1 1s linear 3;
+  animation: rotation1 1.5s linear 3;
 }
 .loader_spin_item--2 {
   border-top: 5px solid #FF79DA;
-  animation: rotation2 1s linear 3;
+  animation: rotation2 1.5s linear 3;
 }
 .loader_spin_item--3 {
   border-top: 5px solid #99E2D0;
-  animation: rotation3 1s linear 3;
+  animation: rotation3 1.5s linear 3;
 }
 
 /* ====================================== */
@@ -402,7 +402,6 @@ p, .menu_details_part_item h4 {
 }
 .rest_card:hover {
   transform: scale(1.05);
-  background-color: #d5f3eb;
 }
 .rest_card_img {
   width: 100%;
@@ -430,9 +429,24 @@ p, .menu_details_part_item h4 {
 }
 .rest_card_content_heart {
   margin-right: 10px;
+  width: 25px;
   height: 25px;
   padding: 10px;
   align-self: center;
+  position: absolute;
+  right: 0;
+}
+.rest_card_content_heart--nolike:hover {
+  z-index: 1000;
+}
+.rest_card_content_heart--like {
+  transform: translateY(20px);
+  transition: all 1s ease-in-out;
+}
+.rest_card_content_heart--like:hover {
+  transform: translateY(0);
+  background: linear-gradient(175deg, #9356DC 0%, #FF79DA 100%);
+  z-index: 1;
 }
 .rest_card_new {
   position: absolute;
@@ -665,12 +679,11 @@ p, .menu_details_part_item h4 {
 }
 .menu_details_part_item .check_bar {
   background-color: red;
+  width: 150px;
   transform-origin: right;
-  transform: scaleX(0);
-  transition: all 2500ms ease-in-out;
 }
 .menu_details_part_item:hover + .check > .check_bar {
-  transform: scaleX(1);
+  background-color: violet;
 }
 .menu_btn {
   align-self: center;
