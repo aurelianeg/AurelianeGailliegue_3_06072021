@@ -53,7 +53,7 @@
     &_container
     {
         width: 100%;
-        @include media-between("tablet-min", "desktop-max")
+        @include media-max("desktop-max")
         {
             height: 300px;
         }
@@ -247,7 +247,7 @@
     }
 }
 
-@for $i from 1 through 9
+@for $i from 1 through 10
 {
     .itemdelay_#{$i}
     {

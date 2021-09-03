@@ -1,3 +1,6 @@
+/* --------------- Color chart --------------- */
+/* --------------- Breakpoints --------------- */
+/* --------------- Sizes --------------- */
 /* --------------- Fonts --------------- */
 /* Logo and titles: Shrikhand
 Text : Roboto */
@@ -31,7 +34,7 @@ html, .localisation_research_type {
   font-family: "Shrikhand", "Trebuchet MS", Arial, sans-serif;
 }
 
-h1, h2, h3 {
+h1, h2 {
   font-weight: 600;
 }
 
@@ -51,8 +54,17 @@ h1 {
   font-size: 25px;
 }
 
-h2, h3, h4, .localisation_research_type {
+h2, h3, h4 {
   font-size: large;
+}
+
+.presentation h4 + a h3, .fonctionnement h3, .localisation_research_type {
+  font-size: medium;
+}
+@media screen and (min-width: 1024px) {
+  .presentation h4 + a h3, .fonctionnement h3, .localisation_research_type {
+    font-size: large;
+  }
 }
 
 p, .menu_details_part_item_txt h4 {
@@ -97,6 +109,17 @@ p, .menu_details_part_item_txt h4 {
   100% {
     transform: translateY(0px);
     opacity: 1;
+  }
+}
+@keyframes popheart {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
   }
 }
 /* --------------- Color chart --------------- */
@@ -218,7 +241,7 @@ p, .menu_details_part_item_txt h4 {
 /* ======================================================== */
 .presentation {
   background-color: #F6F6F6;
-  height: 205px;
+  height: 215px;
   padding: 30px;
   padding-top: 20px;
   padding-bottom: 55px;
@@ -242,9 +265,9 @@ p, .menu_details_part_item_txt h4 {
   width: 80%;
 }
 .presentation_subtitle {
-  width: 80%;
+  width: 100%;
   margin: 0px;
-  margin-bottom: 35px;
+  margin-bottom: 30px;
 }
 .presentation_btn {
   padding-left: 25px;
@@ -258,7 +281,7 @@ p, .menu_details_part_item_txt h4 {
 /* =============== SECTION - FONCTIONNEMENT =============== */
 /* ======================================================== */
 .fonctionnement {
-  padding: 15px;
+  padding: 20px;
   padding-top: 30px;
   padding-bottom: 50px;
 }
@@ -289,6 +312,7 @@ p, .menu_details_part_item_txt h4 {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 .fonc_item_number {
   width: 20px;
@@ -302,6 +326,7 @@ p, .menu_details_part_item_txt h4 {
   justify-content: center;
   align-items: auto;
   position: absolute;
+  left: -4px;
   z-index: 2;
 }
 .fonc_item_container {
@@ -366,6 +391,7 @@ p, .menu_details_part_item_txt h4 {
   }
 }
 .rest_card {
+  background-color: white;
   height: 250px;
   margin: 20px;
   border-radius: 20px;
@@ -415,27 +441,6 @@ p, .menu_details_part_item_txt h4 {
 }
 .rest_card_content_txt h2, .rest_card_content_txt h4 {
   margin: 2px;
-}
-.rest_card_content_heart {
-  margin-right: 10px;
-  width: 25px;
-  height: 25px;
-  padding: 10px;
-  align-self: center;
-  position: absolute;
-  right: 0;
-}
-.rest_card_content_heart--nolike:hover {
-  z-index: 1000;
-}
-.rest_card_content_heart--like {
-  transform: translateY(20px);
-  transition: all 1s ease-in-out;
-}
-.rest_card_content_heart--like:hover {
-  transform: translateY(0);
-  background: linear-gradient(175deg, #9356DC 0%, #FF79DA 100%);
-  z-index: 1;
 }
 .rest_card_new {
   position: absolute;
@@ -490,6 +495,17 @@ p, .menu_details_part_item_txt h4 {
     opacity: 1;
   }
 }
+@keyframes popheart {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 /* --------------- Color chart --------------- */
 /* --------------- Breakpoints --------------- */
 /* --------------- Sizes --------------- */
@@ -537,7 +553,7 @@ p, .menu_details_part_item_txt h4 {
 .menu_img_container {
   width: 100%;
 }
-@media screen and (min-width: 768px) and (max-width: 1439px) {
+@media screen and (max-width: 1439px) {
   .menu_img_container {
     height: 300px;
   }
@@ -758,6 +774,10 @@ p, .menu_details_part_item_txt h4 {
   animation-delay: 900ms;
 }
 
+.itemdelay_10 {
+  animation-delay: 1000ms;
+}
+
 @keyframes loader {
   100% {
     opacity: 0;
@@ -796,6 +816,17 @@ p, .menu_details_part_item_txt h4 {
   100% {
     transform: translateY(0px);
     opacity: 1;
+  }
+}
+@keyframes popheart {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
   }
 }
 /* --------------- Color chart --------------- */
@@ -843,9 +874,9 @@ body {
   height: 30px;
 }
 
-/* ====================================== */
-/* =============== BUTTON =============== */
-/* ====================================== */
+/* ======================================= */
+/* =============== BUTTONS =============== */
+/* ======================================= */
 .btn {
   border: 0px;
   border-radius: 30px;
@@ -861,6 +892,40 @@ body {
   box-shadow: 0px 8px 11px 2px #C5C5C5;
   transform: scale(1.05);
   background: linear-gradient(175deg, #ff93e1 0%, #a16be0 100%);
+}
+
+/* ====================================== */
+/* =============== HEARTS =============== */
+/* ====================================== */
+.heart {
+  width: 25px;
+  height: 25px;
+  transition: all 400ms ease-in-out;
+}
+.heart--nolike {
+  z-index: 1;
+  opacity: 1;
+}
+.heart--like {
+  position: absolute;
+  right: 10px;
+  opacity: 0;
+}
+.heart_container {
+  margin-right: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  transform: scale(1);
+}
+.heart_container:hover .heart--nolike {
+  opacity: 0;
+}
+.heart_container:hover .heart--like {
+  opacity: 1;
+  animation: popheart 300ms ease-in-out 300ms;
 }
 
 /* ====================================== */
