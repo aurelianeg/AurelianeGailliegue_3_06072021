@@ -196,7 +196,7 @@ p, .menu_details_part_item_txt h4 {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: auto;
+    align-items: stretch;
   }
 }
 
@@ -205,7 +205,7 @@ p, .menu_details_part_item_txt h4 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: auto;
+    align-items: stretch;
     width: 55%;
   }
 }
@@ -303,7 +303,7 @@ p, .menu_details_part_item_txt h4 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: space-between;
+    align-items: stretch;
   }
 }
 
@@ -335,7 +335,7 @@ p, .menu_details_part_item_txt h4 {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: auto;
+  align-items: stretch;
   position: absolute;
   left: -4px;
   z-index: 2;
@@ -351,7 +351,7 @@ p, .menu_details_part_item_txt h4 {
   box-shadow: 0px 4px 10px 2px #E7E7E7;
   display: flex;
   flex-direction: row;
-  justify-content: auto;
+  justify-content: stretch;
   align-items: center;
   transition: all 250ms;
 }
@@ -390,14 +390,14 @@ p, .menu_details_part_item_txt h4 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: auto;
+  align-items: stretch;
 }
 @media screen and (min-width: 768px) {
   .rest_container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: auto;
+    align-items: stretch;
     flex-wrap: wrap;
   }
 }
@@ -409,8 +409,8 @@ p, .menu_details_part_item_txt h4 {
   box-shadow: 0px 0px 10px 2px #E6E6E6;
   display: flex;
   flex-direction: column;
-  justify-content: auto;
-  align-items: auto;
+  justify-content: stretch;
+  align-items: stretch;
   overflow: hidden;
   position: relative;
   transform: scale(1);
@@ -444,14 +444,14 @@ p, .menu_details_part_item_txt h4 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: auto;
+  align-items: stretch;
 }
 .rest_card_content_txt {
   margin: 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: auto;
+  align-items: stretch;
 }
 .rest_card_content_txt h2, .rest_card_content_txt h4 {
   margin: 2px;
@@ -559,14 +559,14 @@ p, .menu_details_part_item_txt h4 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: space-between;
+  align-items: stretch;
 }
 @media screen and (min-width: 1440px) {
   .main--menus {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: space-between;
+    align-items: stretch;
   }
 }
 
@@ -599,7 +599,7 @@ p, .menu_details_part_item_txt h4 {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: auto;
+  align-items: stretch;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
   padding: 10px;
@@ -617,7 +617,7 @@ p, .menu_details_part_item_txt h4 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: space-between;
+  align-items: stretch;
   margin-left: 5px;
   margin-right: 5px;
   padding: 10px;
@@ -636,7 +636,7 @@ p, .menu_details_part_item_txt h4 {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: space-between;
+    align-items: stretch;
     flex-wrap: wrap;
   }
 }
@@ -645,7 +645,7 @@ p, .menu_details_part_item_txt h4 {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: space-between;
+    align-items: stretch;
   }
 }
 .menu_details_part {
@@ -681,7 +681,7 @@ p, .menu_details_part_item_txt h4 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: auto;
+  align-items: stretch;
   margin-top: 10px;
   margin-bottom: 10px;
   height: 75px;
@@ -697,7 +697,7 @@ p, .menu_details_part_item_txt h4 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: auto;
+  align-items: stretch;
   width: 100%;
   padding: 15px;
   transition: all 0.5s;
@@ -709,7 +709,7 @@ p, .menu_details_part_item_txt h4 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: auto;
+  align-items: stretch;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -766,6 +766,8 @@ p, .menu_details_part_item_txt h4 {
   margin-bottom: 60px;
   padding-left: 55px;
   padding-right: 55px;
+}
+.menu_btn p {
   color: white;
 }
 
@@ -996,7 +998,7 @@ body {
 .footer_item {
   display: flex;
   flex-direction: row;
-  justify-content: auto;
+  justify-content: stretch;
   align-items: center;
 }
 .footer_item_icon {

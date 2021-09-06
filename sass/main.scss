@@ -1,7 +1,6 @@
 @import "./base/fonts";
 @import "./pages/homepage";
 @import "./pages/menus";
-@import "./utils/functions";
 @import "./utils/keyframes";
 @import "./utils/mixins";
 @import "./utils/variables";
@@ -162,7 +161,7 @@ main
 
     &_item
     {
-        @include flex-row(auto, center);
+        @include flex-row(stretch, center);
 
         &_icon
         {
