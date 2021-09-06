@@ -9,13 +9,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/aurelianeg/ohmyfood-site.git"
+    "url": "git+https://github.com/aurelianeg/AurelianeGailliegue_3_06072021.git"
   },
   "author": "Auréliane Gailliègue",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/aurelianeg/ohmyfood-site/issues"
+    "url": "https://github.com/aurelianeg/AurelianeGailliegue_3_06072021/issues"
   },
-  "homepage": "https://github.com/aurelianeg/ohmyfood-site#readme",
+  "homepage": "https://github.com/aurelianeg/AurelianeGailliegue_3_06072021#readme",
   "browserslist": "last 4 versions"
 }
