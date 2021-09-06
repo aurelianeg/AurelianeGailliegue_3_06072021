@@ -131,13 +131,9 @@
             {
                 width: 47%;
             }
-            @include media-between("desktop-min", "desktop-max")
+            @include media-min("desktop-min")
             {
                 width: 31%;
-            }
-            @include media-min("largedesktop-min")
-            {
-                width: 33%;
             }
 
             &_title

@@ -656,14 +656,9 @@ p, .menu_details_part_item_txt h4 {
     width: 47%;
   }
 }
-@media screen and (min-width: 1024px) and (max-width: 1439px) {
+@media screen and (min-width: 1024px) {
   .menu_details_part {
     width: 31%;
-  }
-}
-@media screen and (min-width: 1440px) {
-  .menu_details_part {
-    width: 33%;
   }
 }
 .menu_details_part_title {
