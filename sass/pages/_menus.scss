@@ -232,6 +232,19 @@
                         }
                     }
                 }
+
+                &:focus
+                {
+                    & .menu_details_part_item_txt
+                    {
+                        width: calc(100% - 100px);
+                    }
+
+                    & .menu_details_part_item_check
+                    {
+                        width: 70px;
+                    }
+                }
             }
         }
     }

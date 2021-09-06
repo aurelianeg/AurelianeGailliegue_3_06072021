@@ -322,6 +322,11 @@
             transform: scale(1.05);
         }
 
+        &:focus
+        {
+            animation: smallpop 300ms ease-in-out;
+        }
+
         &_img
         {
             width: 100%;

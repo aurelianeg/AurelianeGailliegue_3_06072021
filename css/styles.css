@@ -122,6 +122,17 @@ p, .menu_details_part_item_txt h4 {
     transform: scale(1);
   }
 }
+@keyframes smallpop {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 /* --------------- Color chart --------------- */
 /* --------------- Breakpoints --------------- */
 /* --------------- Sizes --------------- */
@@ -418,6 +429,9 @@ p, .menu_details_part_item_txt h4 {
 .rest_card:hover {
   transform: scale(1.05);
 }
+.rest_card:focus {
+  animation: smallpop 300ms ease-in-out;
+}
 .rest_card_img {
   width: 100%;
   height: 70%;
@@ -501,6 +515,17 @@ p, .menu_details_part_item_txt h4 {
   }
   50% {
     transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes smallpop {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
   }
   100% {
     transform: scale(1);
@@ -729,6 +754,12 @@ p, .menu_details_part_item_txt h4 {
   transform: rotate(0deg);
   transition: all 0.5s;
 }
+.menu_details_part_item:focus .menu_details_part_item_txt {
+  width: calc(100% - 100px);
+}
+.menu_details_part_item:focus .menu_details_part_item_check {
+  width: 70px;
+}
 .menu_btn {
   align-self: center;
   margin-top: 40px;
@@ -829,6 +860,17 @@ p, .menu_details_part_item_txt h4 {
     transform: scale(1);
   }
 }
+@keyframes smallpop {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 /* --------------- Color chart --------------- */
 /* --------------- Breakpoints --------------- */
 /* --------------- Sizes --------------- */
@@ -893,6 +935,9 @@ body {
   transform: scale(1.05);
   background: linear-gradient(175deg, #ff93e1 0%, #a16be0 100%);
 }
+.btn:focus {
+  animation: smallpop 300ms ease-in-out;
+}
 
 /* ====================================== */
 /* =============== HEARTS =============== */
@@ -900,7 +945,7 @@ body {
 .heart {
   width: 25px;
   height: 25px;
-  transition: all 400ms ease-in-out;
+  transition: all 150ms ease-in-out;
 }
 .heart--nolike {
   z-index: 1;
@@ -925,7 +970,14 @@ body {
 }
 .heart_container:hover .heart--like {
   opacity: 1;
-  animation: popheart 300ms ease-in-out 300ms;
+  animation: popheart 200ms ease-in-out 150ms;
+}
+.heart_container:focus .heart--nolike {
+  opacity: 0;
+}
+.heart_container:focus .heart--like {
+  opacity: 1;
+  animation: popheart 200ms ease-in-out 150ms;
 }
 
 /* ====================================== */

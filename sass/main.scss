@@ -75,6 +75,11 @@ main
         transform: scale(1.05);
         background: linear-gradient(175deg, lighten($color-secondary, 5%) 0%, lighten($color-primary, 5%) 100%);
     }
+
+    &:focus
+    {
+        animation: smallpop 300ms ease-in-out;
+    }
 }
 
 /* ====================================== */
@@ -85,7 +90,7 @@ main
 {
     width: 25px;
     height: 25px;
-    transition: all 400ms ease-in-out;
+    transition: all 150ms ease-in-out;
 
     &--nolike 
     {
@@ -117,7 +122,21 @@ main
             & .heart--like
             {
                 opacity: 1;
-                animation: popheart 300ms ease-in-out 300ms;
+                animation: popheart 200ms ease-in-out 150ms;
+            }
+        }
+
+        &:focus
+        {
+            & .heart--nolike
+            {
+                opacity: 0;
+            }
+
+            & .heart--like
+            {
+                opacity: 1;
+                animation: popheart 200ms ease-in-out 150ms;
             }
         }
     }
