@@ -1,0 +1,55 @@
+.heart
+{
+    width: 25px;
+    height: 25px;
+    transition: all 150ms ease-in-out;
+
+    &--nolike 
+    {
+        z-index: 1;
+        opacity: 1;
+    }
+
+    &--like
+    {
+        position: absolute;
+        right: 10px;
+        opacity: 0;
+    }
+
+    &_container
+    {
+        margin-right: 10px;
+        padding: 10px;
+        @include flex-row(center, center);
+        transform: scale(1);
+
+        &:hover
+        {
+            & .heart--nolike
+            {
+                opacity: 0;
+            }
+
+            & .heart--like
+            {
+                opacity: 1;
+                animation: popheart 200ms ease-in-out 150ms;
+            }
+        }
+
+        &:focus
+        {
+            & .heart--nolike
+            {
+                opacity: 0;
+            }
+
+            & .heart--like
+            {
+                opacity: 1;
+                animation: popheart 200ms ease-in-out 150ms;
+            }
+        }
+    }
+}
