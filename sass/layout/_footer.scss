@@ -3,35 +3,51 @@
     background-color: $darkgrey;
     padding: 25px;
     padding-bottom: 30px;
+    @include flex-row(space-between, stretch);
+    flex-wrap: wrap;
 
     &_logo
     {
         height: 18px;
         margin-top: 5px;
         margin-bottom: 10px;
+
+        &_container
+        {
+            width: 100%;
+        }
     }
 
     &_item
     {
         @include flex-row(stretch, center);
+        width: 100%;
+        @include media-between("tablet-min", "tablet-max")
+        {
+            width: 45%;
+        }
+        @include media-min("desktop-min")
+        {
+            width: 20%;
+        }
 
         &_icon
         {
             height: 15px;
             margin-right: 10px;
         }
-    }
 
-    p
-    {
-        color: white;
-        margin-top: 5px;
-        margin-bottom: 5px;
-        transition: all 250ms;
-
-        &:hover
+        p
         {
-            color: $color-tertiary;
+            color: white;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            transition: all 250ms;
+
+            &:hover
+            {
+                color: $color-tertiary;
+            }
         }
     }
 }
