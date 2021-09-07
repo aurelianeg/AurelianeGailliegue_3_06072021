@@ -1,38 +1,33 @@
-@import "../utils/mixins";
-@import "../utils/variables";
-
-/* --------------- Fonts --------------- */
-
 /* Logo and titles: Shrikhand
 Text : Roboto */
 
 @font-face
 {
     font-family: "Roboto";
-    src: url('../assets/fonts/roboto/Roboto-Thin-webfont.woff') format('woff');
-    src: url('../assets/fonts/roboto/Roboto-Thin.ttf') format('truetype');
+    src: url('../../assets/fonts/roboto/Roboto-Thin-webfont.woff') format('woff');
+    src: url('../../assets/fonts/roboto/Roboto-Thin.ttf') format('truetype');
     font-weight: 400;
 }
 
 @font-face
 {
     font-family: "Roboto";
-    src: url('../assets/fonts/roboto/Roboto-Regular.ttf') format('truetype');
+    src: url('../../assets/fonts/roboto/Roboto-Regular.ttf') format('truetype');
     font-weight: 500;
 }
 
 @font-face
 {
     font-family: "Roboto";
-    src: url('../assets/fonts/roboto/Roboto-Bold-webfont.woff') format('woff');
-    src: url('../assets/fonts/roboto/Roboto-Bold.ttf') format('truetype');
+    src: url('../../assets/fonts/roboto/Roboto-Bold-webfont.woff') format('woff');
+    src: url('../../assets/fonts/roboto/Roboto-Bold.ttf') format('truetype');
     font-weight: 600;
 }
 
 @font-face
 {
     font-family: "Shrikhand";
-    src: url('../assets/fonts/shrikhand/Shrikhand-Regular.otf') format("opentype");
+    src: url('../../assets/fonts/shrikhand/Shrikhand-Regular.otf') format("opentype");
     font-weight: 500;
 }
 
