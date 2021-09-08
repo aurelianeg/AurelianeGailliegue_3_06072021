@@ -224,22 +224,49 @@
             border-radius: 20px;
             box-shadow: 0px 4px 10px 2px #E7E7E7;
             @include flex-row(stretch, center);
-            transition: all 250ms;
+            transition: all 300ms ease-in-out;
+            position: relative;
 
             &:hover
             {
                 background-color: $color-primarylight;
+
+                & .fonc_item_container_icon
+                {
+                    &--grey
+                    {
+                        opacity: 0;
+                    }
+
+                    &--color
+                    {
+                        opacity: 1;
+                    }
+                }
             }
 
             &_icon
             {
-                width: 20%;
+                position: absolute;
+                width: 15%;
                 height: 20px;
                 margin-right: 5px;
+                transition: all 300ms ease-in-out;
+
+                &--grey
+                {
+                    opacity: 1;
+                }
+
+                &--color
+                {
+                    opacity: 0;
+                }
             }
 
             h3
             {
+                margin-left: 100px;
                 margin-right: 10px;
             }
         }
