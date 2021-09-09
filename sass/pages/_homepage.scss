@@ -9,8 +9,8 @@
     height: 100%;
     @include flex-row(center, center);
     position: fixed;
-    animation: loader 0.5s;
-    animation-delay: 1s;
+    animation: loader 0.05s;
+    animation-delay: 1.75s;
     animation-fill-mode: both;
     z-index: 10;
 
@@ -29,19 +29,19 @@
             &--1
             {
                 border-top: 5px solid $color-primary;
-                animation: rotation1 1.5s linear 3;
+                animation: rotation1 2s linear;
             }
 
             &--2
             {
                 border-top: 5px solid $color-secondary;
-                animation: rotation2 1.5s linear 3;
+                animation: rotation2 2s linear;
             }
 
             &--3
             {
                 border-top: 5px solid $color-tertiary;
-                animation: rotation3 1.5s linear 3;
+                animation: rotation3 2s linear;
             }
         }
     }

@@ -307,8 +307,8 @@ body {
   justify-content: center;
   align-items: center;
   position: fixed;
-  animation: loader 0.5s;
-  animation-delay: 1s;
+  animation: loader 0.05s;
+  animation-delay: 1.75s;
   animation-fill-mode: both;
   z-index: 10;
 }
@@ -328,15 +328,15 @@ body {
 }
 .loader_spin_item--1 {
   border-top: 5px solid #9356DC;
-  animation: rotation1 1.5s linear 3;
+  animation: rotation1 2s linear;
 }
 .loader_spin_item--2 {
   border-top: 5px solid #FF79DA;
-  animation: rotation2 1.5s linear 3;
+  animation: rotation2 2s linear;
 }
 .loader_spin_item--3 {
   border-top: 5px solid #99E2D0;
-  animation: rotation3 1.5s linear 3;
+  animation: rotation3 2s linear;
 }
 
 /* ====================================================== */
