@@ -1,33 +1,12 @@
+/* --------------- Appearance --------------- */
+/* Loading spinner */
 @keyframes loader {
   100% {
     opacity: 0;
     z-index: -1;
   }
 }
-@keyframes rotation1 {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-@keyframes rotation2 {
-  from {
-    transform: rotate(120deg);
-  }
-  to {
-    transform: rotate(480deg);
-  }
-}
-@keyframes rotation3 {
-  from {
-    transform: rotate(240deg);
-  }
-  to {
-    transform: rotate(600deg);
-  }
-}
+/*  Each menu item appearing from the bottom */
 @keyframes showitem {
   0% {
     transform: translateY(30px);
@@ -38,6 +17,36 @@
     opacity: 1;
   }
 }
+/* --------------- Rotation --------------- */
+/* First component of the loading spinner */
+@keyframes rotation1 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* Second component of the loading spinner */
+@keyframes rotation2 {
+  from {
+    transform: rotate(120deg);
+  }
+  to {
+    transform: rotate(480deg);
+  }
+}
+/* Third component of the loading spinner */
+@keyframes rotation3 {
+  from {
+    transform: rotate(240deg);
+  }
+  to {
+    transform: rotate(600deg);
+  }
+}
+/* --------------- Popping before returning to initial state --------------- */
+/* Heart popping */
 @keyframes popheart {
   0% {
     transform: scale(1);
@@ -49,6 +58,7 @@
     transform: scale(1);
   }
 }
+/* Little item popping */
 @keyframes smallpop {
   0% {
     transform: scale(1);
@@ -60,6 +70,15 @@
     transform: scale(1);
   }
 }
+/* --------------- Flex disposition --------------- */
+/* In rows */
+/* In columns */
+/* --------------- Responsive --------------- */
+/* Under a given breakpoint */
+/* Between two given breakpoints */
+/* Above a given breakpoint */
+/* --------------- Overlapping --------------- */
+/* Text with three dots if overlapped */
 /* --------------- Color chart --------------- */
 /* --------------- Breakpoints --------------- */
 /* --------------- Sizes --------------- */
@@ -156,6 +175,7 @@ p, .menu_details_part_item_txt h4 {
   width: 25px;
   height: 25px;
   transition: all 150ms ease-in-out;
+  /* Transition on opacity and z-index */
 }
 .heart--nolike {
   z-index: 1;
@@ -174,18 +194,12 @@ p, .menu_details_part_item_txt h4 {
   justify-content: center;
   align-items: center;
   transform: scale(1);
+  /* Make full heart appear and rapidly pop for user feedback */
 }
 .heart_container:hover .heart--nolike {
   opacity: 0;
 }
 .heart_container:hover .heart--like {
-  opacity: 1;
-  animation: popheart 200ms ease-in-out 150ms;
-}
-.heart_container:focus .heart--nolike {
-  opacity: 0;
-}
-.heart_container:focus .heart--like {
   opacity: 1;
   animation: popheart 200ms ease-in-out 150ms;
 }
@@ -209,6 +223,7 @@ p, .menu_details_part_item_txt h4 {
   width: 100%;
 }
 .footer_item {
+  /* Responsive */
   display: flex;
   flex-direction: row;
   justify-content: stretch;
@@ -252,13 +267,16 @@ body {
   background-color: white;
   margin: 0 auto;
   height: 100vh;
+  /* To remove the blank space under footer */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: stretch;
-  /* To remove the blank space under footer */
 }
 
+main {
+  /* Responsive */
+}
 @media screen and (min-width: 1440px) {
   main {
     height: 100%;
@@ -832,12 +850,6 @@ body {
 .menu_details_part_item:hover .menu_details_part_item_check_icon {
   transform: rotate(0deg);
   transition: all 0.5s;
-}
-.menu_details_part_item:focus .menu_details_part_item_txt {
-  width: calc(100% - 100px);
-}
-.menu_details_part_item:focus .menu_details_part_item_check {
-  width: 70px;
 }
 .menu_btn {
   align-self: center;

@@ -17,6 +17,7 @@
     &_spin
     { 
         @include flex-row(center, center);
+        
         &_item
         {
             width: $spinner-size;

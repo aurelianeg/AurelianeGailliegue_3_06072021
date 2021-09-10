@@ -13,12 +13,13 @@ body
 {
     background-color: white;
     margin: 0 auto;
-    height: 100vh;
-    @include flex-col(space-between, stretch); /* To remove the blank space under footer */
+    height: 100vh;                               /* To remove the blank space under footer */
+    @include flex-col(space-between, stretch);
 }
 
 main
 {
+    /* Responsive */
     @include media-min("largedesktop-min")
     {
         height: 100%;

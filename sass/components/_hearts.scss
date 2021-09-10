@@ -2,9 +2,9 @@
 {
     width: 25px;
     height: 25px;
-    transition: all 150ms ease-in-out;
+    transition: all 150ms ease-in-out;      /* Transition on opacity and z-index */
 
-    &--nolike 
+    &--nolike
     {
         z-index: 1;
         opacity: 1;
@@ -24,6 +24,7 @@
         @include flex-row(center, center);
         transform: scale(1);
 
+        /* Make full heart appear and rapidly pop for user feedback */
         &:hover
         {
             & .heart--nolike
@@ -34,21 +35,7 @@
             & .heart--like
             {
                 opacity: 1;
-                animation: popheart 200ms ease-in-out 150ms;
-            }
-        }
-
-        &:focus
-        {
-            & .heart--nolike
-            {
-                opacity: 0;
-            }
-
-            & .heart--like
-            {
-                opacity: 1;
-                animation: popheart 200ms ease-in-out 150ms;
+                animation: popheart 200ms ease-in-out 150ms;        
             }
         }
     }

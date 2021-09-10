@@ -20,6 +20,7 @@
 
     &_item
     {
+        /* Responsive */
         @include flex-row(stretch, center);
         width: 100%;
         @include media-between("tablet-min", "tablet-max")

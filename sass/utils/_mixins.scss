@@ -1,3 +1,6 @@
+/* --------------- Flex disposition --------------- */
+
+/* In rows */
 @mixin flex-row($justify-content, $align-items)
 {
     display: flex;
@@ -6,6 +9,7 @@
     align-items: $align-items;
 }
 
+/* In columns */
 @mixin flex-col($justify-content, $align-items)
 {
     display: flex;
@@ -14,6 +18,10 @@
     align-items: $align-items;
 }
 
+
+/* --------------- Responsive --------------- */
+
+/* Under a given breakpoint */
 @mixin media-min($_key)
 {
     @media screen and (min-width: map-get($breakpoints, $_key))
@@ -22,6 +30,7 @@
     }
 }
 
+/* Between two given breakpoints */
 @mixin media-between($_key1, $_key2)
 {
     @media screen and (min-width: map-get($breakpoints, $_key1)) and (max-width: map-get($breakpoints, $_key2))
@@ -30,6 +39,7 @@
     }
 }
 
+/* Above a given breakpoint */
 @mixin media-max($_key)
 {
     @media screen and (max-width: map-get($breakpoints, $_key))
@@ -38,6 +48,10 @@
     }
 }
 
+
+/* --------------- Overlapping --------------- */
+
+/* Text with three dots if overlapped */
 @mixin overflowing-text()
 {
     white-space: nowrap;

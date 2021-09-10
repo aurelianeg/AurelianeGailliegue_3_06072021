@@ -1,41 +1,15 @@
+/* --------------- Appearance --------------- */
+
+/* Loading spinner */
 @keyframes loader
 {
     100% {
         opacity: 0;
         z-index: -1;
     }
-} 
-
-@keyframes rotation1
-{
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
 }
 
-@keyframes rotation2
-{
-    from {
-        transform: rotate(120deg);
-    }
-    to {
-        transform: rotate(480deg);
-    }
-}
-
-@keyframes rotation3
-{
-    from {
-        transform: rotate(240deg);
-    }
-    to {
-        transform: rotate(600deg);
-    }
-}
-
+/*  Each menu item appearing from the bottom */
 @keyframes showitem
 {
     0% {
@@ -48,6 +22,46 @@
     }
 }
 
+
+/* --------------- Rotation --------------- */
+
+/* First component of the loading spinner */
+@keyframes rotation1
+{
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Second component of the loading spinner */
+@keyframes rotation2
+{
+    from {
+        transform: rotate(120deg);
+    }
+    to {
+        transform: rotate(480deg);
+    }
+}
+
+/* Third component of the loading spinner */
+@keyframes rotation3
+{
+    from {
+        transform: rotate(240deg);
+    }
+    to {
+        transform: rotate(600deg);
+    }
+}
+
+
+/* --------------- Popping before returning to initial state --------------- */
+
+/* Heart popping */
 @keyframes popheart
 {
     0% {
@@ -61,6 +75,7 @@
     }
 }
 
+/* Little item popping */
 @keyframes smallpop
 {
     0% {
