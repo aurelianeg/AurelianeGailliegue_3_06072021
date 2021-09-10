@@ -19,7 +19,6 @@ body
 
 main
 {
-    /* Responsive */
     @include media-min("largedesktop-min")
     {
         height: 100%;
