@@ -10,6 +10,7 @@ Ohmyfood![^1] is a company for online meal orders. Their concept allows users to
 
 The target being people connected and in a hurry, the site will be developed using the mobile-first approach.
 Only mobile designs will be produced, the website will have to be responsive for tablets and desktop, but their layout is free.
+
 ![Design for the home page](./design/home.png "Design for the home page")
 
 
